@@ -1,0 +1,62 @@
+.h-ac {
+    list-style-type: none;
+    margin: 25px 0;
+    padding: 0;
+}
+
+.h-ac li {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 200px;
+    height: 40px;
+    position: relative;
+}
+
+.acbf {
+    margin-bottom: 20px !important;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+
+.acbf label,
+.acbf input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.acbf input[type="checkbox"] {
+    display: none;
+}
+
+.acbf .fa {
+    position: absolute;
+    color: #fff;
+    background-color: rgb(72, 44, 191);
+    padding: 3px;
+    top: 0;
+    right: 0;
+}
+
+.acbf-checked .fa {
+    overflow: hidden;
+    display: block !important;
+}
+
+.acbf-checked label {
+    border: 2px solid rgb(72, 44, 191) !important;
+}
+
+.acbf label {
+    padding: 12px 0 37px 0;
+    border: 2px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.activated label {
+    border: 2px solid rgb(72, 44, 191) !important;
+}

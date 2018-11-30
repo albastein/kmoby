@@ -1,0 +1,42 @@
+.nopad {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+}
+
+
+/*Radio*/
+
+.image-radio {
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: 2px solid rgb(212, 221, 221);
+    padding: 20px 4px;
+    margin: 5px;
+    outline: 0;
+}
+
+.image-radio input[type="radio"] {
+    display: none;
+}
+
+.image-radio-checked {
+    border-color: rgb(72, 44, 191);
+}
+
+.image-radio .fa {
+    position: absolute;
+    color: #fff;
+    background-color: rgb(72, 44, 191);
+    padding: 3px;
+    top: 0;
+    right: 0;
+}
+
+.image-radio-checked .fa {
+    overflow: hidden;
+    display: block !important;
+}

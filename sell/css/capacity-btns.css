@@ -1,0 +1,62 @@
+.h-m {
+    list-style-type: none;
+    margin: 25px 0;
+    padding: 0;
+}
+
+.h-m li {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 200px;
+    height: 40px;
+    position: relative;
+}
+
+.cbf {
+    margin-bottom: 20px !important;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+
+.cbf label,
+.cbf input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.cbf input[type="radio"] {
+    display: none;
+}
+
+.cbf .fa {
+    position: absolute;
+    color: #fff;
+    background-color: rgb(72, 44, 191);
+    padding: 3px;
+    top: 0;
+    right: 0;
+}
+
+.cbf-checked .fa {
+    overflow: hidden;
+    display: block !important;
+}
+
+.cbf-checked label {
+    border: 2px solid rgb(72, 44, 191) !important;
+}
+
+.cbf label {
+    padding: 12px 0 37px 0;
+    border: 2px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.activated label {
+    border: 2px solid rgb(72, 44, 191) !important;
+}

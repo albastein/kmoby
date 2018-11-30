@@ -1,0 +1,385 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #8790af;
+    background: #f5f6ff;
+}
+
+#navi-link {
+    color: white;
+}
+
+/*-- Page-Title --*/
+
+.page-title .title {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #8790af;
+    font-weight: 600;
+}
+
+.text-center.page-title .title:before,
+.page-title .title:after {
+    content: '';
+    width: 50px;
+    height: 1px;
+    display: inline-block;
+    background-color: #e1e1e1;
+    margin: 0 15px;
+    -webkit-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    transform: translateY(-4px);
+}
+
+/* Box Icon */
+.footer-box {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-next {
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 40px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#482cbf+0,6ac6f0+100 */
+    background: rgb(72, 44, 191);
+    /* Old browsers */
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    background: linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+    position: relative;
+    z-index: 1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.btn-next:hover {
+    border: 1px solid rgb(72, 44, 191);
+    color: rgb(72, 44, 191);
+    background: #fff;
+}
+
+.footer-box .box-icon {
+    width: 75px;
+    height: 75px;
+    margin: auto auto 30px auto;
+    text-align: center;
+    line-height: 75px;
+    color: #ffffff;
+    font-size: 20px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#482cbf+0,6ac6f0+100 */
+    background: rgb(72, 44, 191);
+    /* Old browsers */
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    background: linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+    border-radius: 100%;
+    position: relative;
+    z-index: 1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.footer-box .box-icon:before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    border: 2px solid #ffffff;
+    border-radius: 100%;
+    z-index: -1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s
+}
+
+.footer-box:hover .box-icon {
+    color: #5e88fc;
+}
+
+.footer-box:hover .box-icon:before {
+    background-color: #ffffff;
+}
+
+
+#magic-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: #8ee4ec;
+}
+
+.sell-a-phone {
+    background: linear-gradient(rgb(255, 255, 255), #f5f6ff);
+}
+
+.valuation {
+    margin-top: 40px;
+}
+
+#fset-titles {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    color: rgba(0, 0, 0, 0.664);
+}
+
+
+
+.shadowed {
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: url(#drop-shadow);
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+}
+
+html {
+    min-width: 320px;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+
+/* footer bg */
+
+.futa {
+    background-color: rgb(72, 44, 191);
+}
+
+#sell-a-phone {
+    margin-top: 80px;
+}
+
+.sell-wizard {
+    margin-top: 75px;
+}
+
+#slvalue {
+    display: none;
+}
+
+.collection {
+    color: rgb(255, 104, 104);
+}
+
+.deduct {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.our-fees {
+    color: rgb(255, 104, 104);
+}
+
+.cust-pay {
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(46, 148, 71);
+}
+
+.customer-pay {
+    margin-top: 25px;
+    margin-bottom: -15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+#wlcm-ttl {
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 60px;
+    color: rgb(0, 0, 0);
+}
+
+.sell-brand-selector,
+.buy-brand-selector {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#nopad {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.wizard-buttons {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#btn-uls {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#sell-phone-title,
+#buy-phone-title {
+    text-align: center;
+    color: rgb(72, 44, 191);
+}
+
+.smlr-uls {
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ws-description {
+    color: rgb(141, 159, 161);
+}
+
+.popover {
+    background: rgb(250, 178, 166);
+}
+
+.arrow::after,
+.bs-popover-top .arrow::after {
+    bottom: 1px;
+    border-top-color: rgb(250, 178, 166);
+}
+
+.sell-button {
+    margin-bottom: 5px;
+}
+
+.sell-button:hover {
+    cursor: pointer;
+}
+
+.btn-sellval {
+    text-align: center;
+}
+
+.btn-sellval:hover {
+    cursor: pointer;
+}
+
+.sell-btn-ico:hover,
+.buy-btn-ico:hover {
+    display: none;
+}
+
+#d-wrapper {
+    margin-bottom: -40px;
+}
+
+#FAQ {
+    margin: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-payments {
+    margin: 0 0 20px 0;
+}
+
+#smedia-icos {
+    margin: 20px;
+}
+
+#pymt-icos {
+    margin: 0 20px;
+}
+
+.footer-social {
+    color: #fff;
+    margin: 0 0 40px 0;
+}
+
+.copyrgt {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: -20px;
+    padding-bottom: 20px;
+}
+
+.btn-oval {
+    border-radius: 22.5px;
+}
+
+.btn-previous {
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 40px;
+    color: #fff;
+}
+
+.model-btn-labels p,
+.capacity-btn-labels p,
+.accs-btn-labels p {
+    margin-top: -3px;
+}
+
+.add-new-btn:hover {
+    border: 1px solid rgba(71, 44, 191, 0);
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#482cbf+0,6ac6f0+100 */
+    background: rgb(72, 44, 191);
+    /* Old browsers */
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    background: linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+    position: relative;
+    z-index: 1;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.val-btn-previous {
+    margin-top: 20px;
+}
+
+.add-new-btn {
+    margin-top: 20px;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px 40px;
+    border: 1px solid rgb(72, 44, 191);
+    color: rgb(72, 44, 191);
+    background: #fff;
+}

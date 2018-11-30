@@ -1,0 +1,33 @@
+.carousel-inner img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    border: 3px solid rgb(72, 44, 191);
+    padding: 5px;
+}
+
+.testimonials {
+    background: rgb(255, 255, 255);
+    color: rgb(72, 44, 191);
+    padding-bottom: 90px;
+}
+
+.testimonials .carousel-indicators {
+    bottom: -60px;
+}
+
+.carousel-inner p {
+    font-size: 14px;
+    font-weight: 300px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.carousel-indicators li {
+    background-color: rgb(7, 69, 76, 0.5);
+}
+
+.carousel-indicators .active {
+    background-color: rgb(72, 44, 191);
+}

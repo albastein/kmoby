@@ -1,0 +1,72 @@
+.h-ws {
+    list-style-type: none;
+    margin: 25px 0;
+    padding: 0;
+}
+
+.h-ws li {
+    float: left;
+    margin: 0 5px 0 0;
+    width: 200px;
+    min-height: 90px;
+    position: relative;
+}
+
+.wsbf {
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+
+.wsbf label,
+.wsbf input {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.wsbf input[type="radio"] {
+    display: none;
+}
+
+.wsbf .fa {
+    position: absolute;
+    color: #fff;
+    background-color: rgb(72, 44, 191);
+    padding: 3px;
+    top: 0;
+    right: 0;
+}
+
+.wsbf-checked .fa {
+    overflow: hidden;
+    display: block !important;
+}
+
+.wsbf-checked label {
+    border: 2px solid rgb(72, 44, 191) !important;
+}
+
+.wsbf label {
+    padding: 12px 0 37px 0;
+    border: 2px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+}
+
+.activated label {
+    border: 2px solid rgb(72, 44, 191) !important;
+}
+
+.ws-btn-labels #wslbl {
+    font: 17px arial, sans-serif;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.ws-description {
+    font: 15px arial, sans-serif;
+    margin: 0 5px;
+}
