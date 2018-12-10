@@ -20,12 +20,13 @@ body {
     letter-spacing: 1.5px;
     color: #8790af;
     font-weight: 600;
+    font-size: 14px;
 }
 
 .text-center.page-title .title:before,
 .page-title .title:after {
     content: '';
-    width: 50px;
+    width: 30px;
     height: 1px;
     display: inline-block;
     background-color: #e1e1e1;

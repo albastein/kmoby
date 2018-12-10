@@ -1,0 +1,127 @@
+.login fieldset {
+  border: none;
+}
+
+.login label {
+  font-weight: 100;
+  font-size: 14px;
+  color: rgb(82, 82, 82);
+}
+
+.login {
+  position: relative;
+  width: 350px;
+  display: none;
+  float: right;
+  right: -150px;
+  margin-top: 20px;
+}
+
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 15px solid #ECF0F1;
+  right: 10%;
+  position: absolute;
+  top: -10px;
+}
+
+.formholder {
+  background: #ecf0f1;
+  width: 350px;
+  border-radius: 5px;
+  padding-top: 5px;
+}
+
+.formholder input[type="email"],
+.formholder input[type="password"] {
+  color: #000;
+  padding: 7px 10px 7px 15px;
+  margin: 4px 0;
+  height: 40px;
+  width: 96%;
+  display: block;
+  font-size: 14px;
+  border-radius: 20px;
+  border: 1px solid rgb(140, 139, 148);
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.formholder input[type="email"]:focus,
+.formholder input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 1px 1px rgb(72, 44, 191);
+}
+
+.log-btn {
+  border: 1px solid rgb(72, 44, 191);
+  width: 152px;
+  height: 40px;
+  margin: auto;
+  margin-top: 29px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 2px 0;
+  background: #eeedf2;
+  font-size: 14px;
+  color: rgb(72, 44, 191);
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.log-btn:focus {
+  color: rgb(72, 44, 191);
+}
+
+.log-btn:hover {
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#482cbf+0,6ac6f0+100 */
+  background: rgb(72, 44, 191);
+  /* Old browsers */
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -o-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+  background: linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+}
+
+.randompad {
+  padding: 10px;
+}
+
+.green {
+  color: #1abc9c;
+}
+
+.login-alert {
+  display: none;
+}
+
+.in-alert {
+  margin-top: -30px;
+  font-size: 14px;
+}

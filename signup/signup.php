@@ -36,10 +36,13 @@ if($result) {
 
         mysqli_query($dbconn, $inssql);
 
+        echo '<span class="signupok">success</span>';
+        echo '<span class="cust-name">' . $fname_value . '</span>';
+
         } else {
 
         echo '<div class="rus-alert alert alert-primary" role="alert">
-        Your email was registered earlier. Click <a href="#" class="alert-link">here</a> to log in.
+        Your email is already registered.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
         </button>

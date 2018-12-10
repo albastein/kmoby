@@ -9739,6 +9739,10 @@ a.text-dark:focus {
     display: none;
   }
 
+  .wizards-lg p {
+    font-size: 14px;
+  }
+
   .how-it-works-sm {
     display: none;
   }

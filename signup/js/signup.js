@@ -7,6 +7,16 @@ $('body').on('hidden.bs.tooltip', function () {
 });
 
 $(document).ready(function () {
+
+    function loadUrl(newLocation) {
+        window.parent.location.href = newLocation;
+        return false;
+    }
+
+    $('.login-link').click(function () {
+        return loadUrl('../login.html');
+    });
+
     $("#fname, #lname, #email, #phone, #paswd, .chckbx").click(function () {
         $('.newws-btn-next').popover('hide');
         $('.newws-btn-next').popover('disable');
@@ -67,7 +77,6 @@ $(document).ready(function () {
 
         } else if (Email == "") {
 
-
             $('#email').addClass('newws-btn-next');
             $('.newws-btn-next').popover({
                 container: 'body',
@@ -89,7 +98,6 @@ $(document).ready(function () {
 
         } else if (Phone == "") {
 
-
             $('#phone').addClass('newws-btn-next');
             $('.newws-btn-next').popover({
                 container: 'body',
@@ -110,7 +118,6 @@ $(document).ready(function () {
             });
 
         } else if (Paswd == "") {
-
 
             $('#paswd').addClass('newws-btn-next');
             $('.newws-btn-next').popover({
@@ -158,6 +165,23 @@ $(document).ready(function () {
                 'email_val': Email,
                 'phone_val': Phone,
                 'paswd_val': Paswd
+            }, function () {
+                $('.cust-name').hide();
+                $('.signupok').hide();
+                if ($('.signupok').text() == 'success') {
+                    let uname = $('.cust-name').text();
+
+                    window.top.$('.signup-btn').hide();
+                    window.top.$('.login-btn').hide();
+                    window.top.$('.prof-name').text(uname);
+                    window.top.$('.prof-name').css({
+                        "text-transform": "lowercase !important",
+                        "letter-spacing": "1px !important"
+                    });
+                    window.top.$('.profile-btn').show();
+
+                    parent.jQuery.fancybox.getInstance().close();
+                }
             });
         }
 

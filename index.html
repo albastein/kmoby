@@ -25,6 +25,7 @@
     <!-- Main-Stylesheets -->
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     <!--[if lt IE 9]>
@@ -57,13 +58,34 @@
                     <li><a href="#gallery_page">Featured</a></li>
                     <li><a href="#sellIFrame">Sell</a></li>
                     <li><a href="#questions_page">FAQ</a></li>
-                    <li><a href="blog.html">Buy</a></li>
+                    <li><a href="buy.html">Buy</a></li>
                     <li><a href="#contact_page">Contacts</a></li>
                 </ul>
-                <div class="right-button hidden-xs">
-                    <a data-fancybox data-type="iframe" data-src="signup/index.html" href="javascript:;">
-                        Sign Up
-                    </a>
+                <div class="signup-btn right-button hidden-xs">
+                    <a class="login-btn">Log in</a>
+                </div>
+                <div class="login">
+                    <div class="arrow-up"></div>
+                    <div class="formholder">
+                        <div class="randompad">
+                            <fieldset>
+                                <label name="email">Email</label>
+                                <input class="form-holder" id="email" type="email" placeholder="example@example.com" />
+                                <label name="password">Password</label>
+                                <div class="form-group log-status">
+                                    <input class="form-holder form-control" id="paswd" type="password" />
+                                </div>
+                                <div class="login-alert alert alert-danger"><span class="in-alert"></span></div>
+                                <button type="button" class="log-btn">Log in</button>
+                                <span id="livalue"></span>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="profile-btn right-button hidden-xs">
+                    <a class="prof-name"></a>
                 </div>
             </div>
         </div>
@@ -90,8 +112,10 @@
                             <strong>12 month warranty</strong>.</p>
                     </div>
                     <div class="space-20"></div>
-                    <a href="#" class="bttn-white wow fadeInUp" data-wow-delay="0.8s"><i class="lnr lnr-user"></i>Log
-                        in</a>
+                    <div class="btn-group">
+                        <a class="signup-iframe login-btn bttn-white wow fadeInUp" data-fancybox data-type="iframe"
+                            data-src="signup/signup.html" href="javascript:;"><i class="lnr lnr-user"></i>Sign Up</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,8 +134,8 @@
                         <h3 class="blue-color">A used phone market that highly values your confidence and trust in our
                             products.</h3>
                         <div class="space-20"></div>
-                        <p>Kmoby reduces the hassle that is the search for best deals suiting the value of high end
-                            used phones. We have deals for popular brands such as Samsung, Huawei and iPhone. </p>
+                        <p>Kmoby reduces the hassle that is the search for best deals suiting the value of used high
+                            end phones. We have deals for popular brands such as Samsung, Huawei and iPhone. </p>
                     </div>
                 </div>
             </div>
@@ -134,7 +158,6 @@
                                 nothing less.</p>
                         </div>
                         <div class="space-50"></div>
-                        <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-md-6">
@@ -163,14 +186,13 @@
                     <div class="page-title">
                         <h5 class="title wow fadeInUp" data-wow-delay="0.2s">VIDEO</h5>
                         <div class="space-10"></div>
-                        <h3 class="dark-color wow fadeInUp" data-wow-delay="0.4s">Grat Application Ever</h3>
+                        <h3 class="dark-color wow fadeInUp" data-wow-delay="0.4s">Created to Assist You</h3>
                         <div class="space-20"></div>
                         <div class="desc wow fadeInUp" data-wow-delay="0.6s">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiing elit, sed do eiusmod tempor incididunt
                                 ut labore et laborused sed do eiusmod tempor incididunt ut labore et laborused.</p>
                         </div>
                         <div class="space-50"></div>
-                        <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -361,7 +383,6 @@
                             labore et laborused sed do eiusmod tempor incididunt ut labore et laborused.</p>
                     </div>
                     <div class="space-50"></div>
-                    <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
                 </div>
             </div>
         </div>
@@ -384,7 +405,6 @@
                             labore et laborused sed do eiusmod tempor incididunt ut labore et laborused.</p>
                     </div>
                     <div class="space-50"></div>
-                    <a href="#" class="bttn-default wow fadeInUp" data-wow-delay="0.8s">Learn More</a>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-5 col-md-offset-1">
                     <div class="space-60 hidden visible-xs"></div>
@@ -591,6 +611,7 @@
     <!--Vendor-JS-->
     <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/vendor/jquery-ui.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <!--Plugin-JS-->
@@ -600,8 +621,11 @@
     <script src="js/scrollUp.min.js"></script>
     <script src="js/magnific-popup.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script src="js/log.js"></script>
     <!--Main-active-JS-->
     <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+
 </body>
 
 <head>
