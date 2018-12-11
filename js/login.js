@@ -17,12 +17,24 @@ $(document).ready(function () {
                 'paswd_val': Paswd
             }, function () {
                 $('.db-check').hide();
+                $('.cus-name').hide();
                 if ($('.db-check').text() == 'notindb') {
                     $('.in-alert').text('Email not registered');
                     $('.login-alert').fadeIn(500);
                     setTimeout("$('.login-alert').fadeOut(1500);", 3000);
                 } else if ($('.db-check').text() == 'success') {
-                    alert('correct password');
+                    let uname = $('.cus-name').text();
+
+                    $('.signup-btn').hide();
+                    $('.login-btn').hide();
+                    $('.prof-name').text(uname);
+                    $('.prof-name').css({
+                        "text-transform": "lowercase !important",
+                        "letter-spacing": "1px !important"
+                    });
+                    $('.login').fadeOut('slow');
+                    $('.profile-btn').show();
+
                 } else if ($('.db-check').text() == 'failed') {
                     $('.log-status').addClass('wrong-entry');
                     $('.in-alert').text('Wrong password');
@@ -31,5 +43,10 @@ $(document).ready(function () {
                 }
             });
         }
+    });
+    $('.log-out').click(function () {
+        $('.profile-btn').hide();
+        $('.signup-btn').show();
+        $('.login-btn').show();
     });
 });

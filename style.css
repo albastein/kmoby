@@ -344,6 +344,10 @@ input:-webkit-autofill:focus {
     text-align: center;
 }
 
+.mainmenu-area .right-button .prof-down {
+    background-color: #000;
+}
+
 .mainmenu-area .right-button a {
     color: #ffffff;
     padding: 10px 40px;
@@ -356,6 +360,27 @@ input:-webkit-autofill:focus {
     width: 11em;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.mainmenu-area .right-button a.ditm {
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    background: none;
+    margin: 2px;
+    display: block;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: 14px;
+    width: 11em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mainmenu-area .right-button a.ditm:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
 }
 
 .mainmenu-area .right-button a:hover {

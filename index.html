@@ -61,8 +61,8 @@
                     <li><a href="buy.html">Buy</a></li>
                     <li><a href="#contact_page">Contacts</a></li>
                 </ul>
-                <div class="signup-btn right-button hidden-xs">
-                    <a class="login-btn">Log in</a>
+                <div class="login-btn right-button hidden-xs">
+                    <a class="login-txt">Log in</a>
                 </div>
                 <div class="login">
                     <div class="arrow-up"></div>
@@ -75,17 +75,25 @@
                                 <div class="form-group log-status">
                                     <input class="form-holder form-control" id="paswd" type="password" />
                                 </div>
-                                <div class="login-alert alert alert-danger"><span class="in-alert"></span></div>
+                                <div class="login-alert alert alert-danger text-center"><span class="in-alert"></span></div>
                                 <button type="button" class="log-btn">Log in</button>
                                 <span id="livalue"></span>
                             </fieldset>
                         </div>
                     </div>
                 </div>
-
-
                 <div class="profile-btn right-button hidden-xs">
-                    <a class="prof-name"></a>
+                    <a class="prof-name dropdown-toggle" type="button" id="profDrop" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="prof-down dropdown-menu" aria-labelledby="profDrop">
+                        <li><a class="ditm" href="about.html"><i class="lnr lnr-user"></i>&nbsp;About Me</a></li>
+                        <li><a class="ditm" href="orders.html"><i class="lnr lnr-cart"></i>&nbsp;Orders</a></li>
+                        <li><a class="ditm" href="listings.html"><i class="lnr lnr-list"></i>&nbsp;Listings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a class="ditm log-out"><i class="lnr lnr-home"></i>&nbsp;Log Out</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -112,9 +120,9 @@
                             <strong>12 month warranty</strong>.</p>
                     </div>
                     <div class="space-20"></div>
-                    <div class="btn-group">
-                        <a class="signup-iframe login-btn bttn-white wow fadeInUp" data-fancybox data-type="iframe"
-                            data-src="signup/signup.html" href="javascript:;"><i class="lnr lnr-user"></i>Sign Up</a>
+                    <div class="signup-btn btn-group">
+                        <a class="signup-iframe bttn-white wow fadeInUp" data-fancybox data-type="iframe" data-src="signup/signup.html"
+                            href="javascript:;"><i class="lnr lnr-user"></i>Sign Up</a>
                     </div>
                 </div>
             </div>
