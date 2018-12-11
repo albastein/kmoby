@@ -9,12 +9,13 @@
 }
 
 .login {
-  position: relative;
+  position: absolute;
   width: 350px;
   display: none;
   float: right;
-  right: -150px;
+  right: 20px;
   margin-top: 20px;
+  z-index: 1000;
 }
 
 .arrow-up {
