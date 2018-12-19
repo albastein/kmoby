@@ -2080,21 +2080,21 @@
                 <h4 id="wlcm-ttl" class="text-center">Welcome back</h4>
                 <h5 id="fset-titles" class="text-center">Please enter your contact details</h5>
                 <div class="container dtin">
-                    <input type="text" class="dt-fname" name="firstName" placeholder="first name" required>
+                    <input type="text" class="dtbx dt-fname" name="firstName" placeholder="first name" required>
                     <div>
-                        <p class="fname-help">Please enter your first name.</p>
+                        <p class="fname-help text-center">Please enter your first name.</p>
                     </div>
-                    <input type="text" class="dt-lname" name="lastName" placeholder="second name" required>
+                    <input type="text" class="dtbx dt-lname" name="lastName" placeholder="second name" required>
                     <div>
-                        <p class="lname-help">Please enter your last name.</p>
+                        <p class="lname-help text-center">Please enter your last name.</p>
                     </div>
-                    <input type="email" class="dt-email" name="email" placeholder="email" required>
+                    <input type="email" class="dtbx dt-email" name="email" placeholder="email" required>
                     <div>
-                        <p class="email-help">Please enter your current email address.</p>
+                        <p class="email-help text-center">Please enter your current email address.</p>
                     </div>
-                    <input type="text" class="dt-pnum" name="phoneNumber" placeholder="phone number" required>
+                    <input type="text" class="dtbx dt-pnum" name="phoneNumber" placeholder="phone number" required>
                     <div>
-                        <p class="pnum-help">Please enter your phone number e.g. 0733 123 456.</p>
+                        <p class="pnum-help text-center">Please enter your phone number e.g. 0733 123 456.</p>
                     </div>
                 </div>
                 <div class="container wizard-buttons">
@@ -2141,7 +2141,9 @@
     <script src="js/details.js"></script>
     <script>
         $(document).ready(function () {
-            $(".accs-btn-next").click(function () {
+            $(".accs-btn-next, .dtls-btn-next").click(function () {
+                $('.cust-value').remove();
+                $('.fee-value').remove();
                 let brandVal = document.getElementById("sell-wiz").elements["brand"].value;
                 let modelVal = document.getElementById("sell-wiz").elements["model"].value;
                 let capacityVal = document.getElementById("sell-wiz").elements["capacity"].value;

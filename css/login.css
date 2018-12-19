@@ -120,6 +120,7 @@
 
 .login-alert {
   display: none;
+  margin-bottom: -15px;
 }
 
 .in-alert {
@@ -133,4 +134,5 @@
 
 .ditm {
   cursor: pointer;
+  margin-left: 15px;
 }

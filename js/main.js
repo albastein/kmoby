@@ -95,7 +95,7 @@ sellIFrame.find('.btn-next, .btn-previous, .add-new-btn').click(function () {
     });
 
     /*-- Smoth-Scroll --*/
-    $('.mainmenu-area a[href*="#"]')
+    $('.mainmenu-area a[href*="#"], .footer-menu a[href*="#"]')
         // Remove links that don't actually link to anything
         .not('[href="#"]')
         .not('[href="#0"]')

@@ -345,7 +345,7 @@ input:-webkit-autofill:focus {
 }
 
 .mainmenu-area .right-button .prof-down {
-    background-color: #000;
+    background-color: rgb(72, 44, 191);
 }
 
 .mainmenu-area .right-button a {
@@ -948,11 +948,35 @@ input:-webkit-autofill:focus {
     border: 1px solid #5e88fc;
 }
 
-.subscribe-form form .bttn-white {
+.subscribe-btn {
+    padding: 0 30px;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    font-size: 14px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    border: none;
+    background: rgb(72, 44, 191);
+    background: -webkit-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    background: linear-gradient(45deg, rgba(72, 44, 191, 1) 0%, rgba(106, 198, 240, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#482cbf', endColorstr='#6ac6f0', GradientType=1);
+    overflow: hidden;
+    z-index: 1;
     position: absolute;
     right: 0;
     top: 0;
     margin-right: 0;
+    height: 50px;
+    color: #fff;
+}
+
+.subscribe-btn:focus {
+    color: #fff;
 }
 
 /*-- 18. Footer-Area --*/
@@ -1384,4 +1408,9 @@ iframe {
 
 .profile-btn {
     display: none;
+    cursor: pointer;
+}
+
+.subscribe-btn {
+    height: 50px;
 }
