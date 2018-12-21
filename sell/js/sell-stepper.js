@@ -850,7 +850,7 @@ jQuery(document).ready(function () {
         var current_active_step = $('form').find('.form-wizard.active');
         var progress_line = $('form').find('.progress-line');
         var fnbox = document.forms["sell-wiz"]["firstName"].value;
-        var lnbox = document.forms["sell-wiz"]["lastName"].value;;
+        var lnbox = document.forms["sell-wiz"]["lastName"].value;
         var ebox = document.forms["sell-wiz"]["email"].value;
         var pnbox = document.forms["sell-wiz"]["phoneNumber"].value;
         var fncookie = Cookies.get("firstName");

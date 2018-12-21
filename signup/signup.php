@@ -38,9 +38,13 @@ if($result) {
 
         echo '<span class="signupok">success</span>';
         echo '<span class="cust-name">' . $fname_value . '</span>';
+        echo '<span class="cust-lname">' . $lname_value . '</span>';
+        echo '<span class="cust-mail">' . $email_value . '</span>';
+        echo '<span class="cust-phone">' . $phone_value . '</span>';
 
         } else {
 
+        echo '<span class="signupfail">failed</span>';
         echo '<div class="rus-alert alert alert-primary" role="alert">
         Your email is already registered.
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">

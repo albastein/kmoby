@@ -76,6 +76,9 @@
                                     <input class="form-holder form-control" id="paswd" type="password" />
                                 </div>
                                 <div class="login-alert alert alert-danger text-center"><span class="in-alert"></span></div>
+                                <div class="login-loader">
+                                    <img class="loading-image" src="images/double-ring.gif" />
+                                </div>
                                 <button type="button" class="log-btn">Log in</button>
                                 <span id="livalue"></span>
                             </fieldset>
@@ -88,11 +91,41 @@
                         <span class="caret"></span>
                     </a>
                     <ul class="prof-down dropdown-menu" aria-labelledby="profDrop">
-                        <li><a class="ditm" href="about.html" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "600px"}}}'>
+                        <li><a class="ditm dash-btns" href="about.html" data-fancybox data-options='{
+                            "type" : "iframe",
+                            "scrolling" : "no", 
+                            "iframe" : {
+                                "scrolling" : "no",
+                                "preload" : false, 
+                                "css" : {
+                                    "width" : "600px", 
+                                    "border-radius" : "20px",
+                                    "overflow" : "hidden"
+                            }}}'>
                                 <i class="lnr lnr-user"></i>&nbsp; &nbsp;About Me</a></li>
-                        <li><a class="ditm" href="orders.html" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "600px"}}}'>
+                        <li><a class="ditm dash-btns" href="orders.html" data-fancybox data-options='{
+                            "type" : "iframe",
+                            "scrolling" : "no", 
+                            "iframe" : {
+                                "scrolling" : "no",
+                                "preload" : false, 
+                                "css" : {
+                                    "width" : "600px", 
+                                    "border-radius" : "20px",
+                                    "overflow" : "hidden"
+                            }}}'>
                                 <i class="lnr lnr-cart"></i>&nbsp; &nbsp;Orders</a></li>
-                        <li><a class="ditm" href="listings.html" data-fancybox data-options='{"type" : "iframe", "iframe" : {"preload" : false, "css" : {"width" : "600px"}}}'>
+                        <li><a class="ditm dash-btns" href="listings.html" data-fancybox data-options='{
+                            "type" : "iframe",
+                            "scrolling" : "no", 
+                            "iframe" : {
+                                "scrolling" : "no",
+                                "preload" : false, 
+                                "css" : {
+                                    "width" : "600px", 
+                                    "border-radius" : "20px",
+                                    "overflow" : "hidden"
+                            }}}'>
                                 <i class="lnr lnr-list"></i>&nbsp; &nbsp;Listings</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a class="ditm log-out"><i class="lnr lnr-home"></i>&nbsp; &nbsp;Log Out</a></li>
@@ -124,8 +157,18 @@
                     </div>
                     <div class="space-20"></div>
                     <div class="signup-btn btn-group">
-                        <a class="signup-iframe bttn-white wow fadeInUp" data-fancybox data-type="iframe" data-src="signup/signup.html"
-                            href="javascript:;"><i class="lnr lnr-user"></i>Sign Up</a>
+                        <a class="signup-iframe bttn-white wow fadeInUp" data-src="signup/signup.html" data-fancybox
+                            data-options='{
+                            "type" : "iframe", 
+                            "iframe" : {
+                                "preload" : false, 
+                                "css" : {
+                                    "width" : "600px", 
+                                    "border-radius" : "20px"
+                                    }
+                                }
+                            }'><i
+                                class="lnr lnr-user"></i>Sign Up</a>
                     </div>
                 </div>
             </div>
@@ -626,6 +669,7 @@
     <script src="js/vendor/bootstrap.min.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
     <!--Plugin-JS-->
+    <script src="js/js.cookie.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/contact-form.js"></script>
     <script src="js/ajaxchimp.js"></script>

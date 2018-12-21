@@ -159,6 +159,7 @@ $(document).ready(function () {
             });
 
         } else {
+            $('.login-loader').show();
             $("#suvalue").load("signup.php", {
                 'fname_val': fName,
                 'lname_val': lName,
@@ -167,10 +168,33 @@ $(document).ready(function () {
                 'paswd_val': Paswd
             }, function () {
                 $('.cust-name').hide();
+                $('.cust-lname').hide();
+                $('.cust-mail').hide();
+                $('.cust-phone').hide();
                 $('.signupok').hide();
-                if ($('.signupok').text() == 'success') {
+                $('.signupfail').hide();
+                if ($('.signupfail').text() == 'failed') {
+                    $('.login-loader').hide();
+                } else if ($('.signupok').text() == 'success') {
                     let uname = $('.cust-name').text();
+                    let ulname = $('.cust-lname').text();
+                    let umail = $('.cust-mail').text();
+                    let uphone = $('.cust-phone').text();
 
+                    Cookies.set("firstName", uname, {
+                        expires: 1
+                    });
+                    Cookies.set("lastName", ulname, {
+                        expires: 1
+                    });
+                    Cookies.set("email", umail, {
+                        expires: 1
+                    });
+                    Cookies.set("phoneNumber", uphone, {
+                        expires: 1
+                    });
+
+                    $('.login-loader').hide();
                     window.top.$('.signup-btn').hide();
                     window.top.$('.login-btn').hide();
                     window.top.$('.prof-name').text(uname);

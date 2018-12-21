@@ -123,6 +123,21 @@
   margin-bottom: -15px;
 }
 
+.login-loader {
+  display: none;
+}
+
+.loading-image {
+  margin-bottom: -15px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: auto;
+}
+
 .in-alert {
   margin-top: -30px;
   font-size: 14px;

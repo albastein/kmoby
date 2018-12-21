@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800');
+
+* {
+    outline: none;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: auto;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #8790af;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin: 0 auto 15px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.cbar {
+    margin: -8px;
+    background-color: rgb(242, 248, 253);
+}
+
+.dlist:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.leftcol {
+    float: left;
+    width: 40%;
+}
+
+.rightcol {
+    float: left;
+    width: 50%;
+}
+
+.cimage {
+    margin-left: 30px;
+    margin-top: 50px;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.details {
+    margin-top: 70px;
+}
+
+.cname {
+    text-transform: capitalize;
+}
+
+.cname,
+.cphone {
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.inner-fname,
+.inner-lname,
+.inner-phone,
+.inner-email {
+    color: #000;
+}

@@ -16,6 +16,14 @@ sellIFrame.find('.btn-next, .btn-previous, .add-new-btn').click(function () {
 
 (function ($) {
 
+    $('.signup-iframe').fancybox({
+        wrapCSS: 'iframe1Class'
+    });
+
+    $('.dash-btns').fancybox({
+        wrapCSS: 'iframe1Class'
+    });
+
     "use strict";
     $(".carousel-inner .item:first-child").addClass("active");
     /* Mobile menu click then remove

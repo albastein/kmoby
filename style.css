@@ -1414,3 +1414,19 @@ iframe {
 .subscribe-btn {
     height: 50px;
 }
+
+.iframe1Class {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.dash-wrapper {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.signup-btn {
+    cursor: pointer;
+}

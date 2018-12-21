@@ -47,15 +47,20 @@ if($result) {
                 //</div>';
             }
 
-            $namesql = "SELECT fname FROM users WHERE email = '".$email_value."' AND paswd = '".$paswd_value."'";
+            $namesql = "SELECT fname, lname, phone FROM users WHERE email = '".$email_value."' AND paswd = '".$paswd_value."'";
 
             $nameresult = mysqli_query($dbconn, $namesql);
 
             if (mysqli_num_rows($nameresult) > 0) {
                 $row = mysqli_fetch_assoc($nameresult);
                 $cfname = $row['fname'];
+                $clname = $row['lname'];
+                $cphone = $row['phone'];
                 
                 echo '<span class="cus-name">' . $cfname . '</span>';
+                echo '<span class="cus-lname">' . $clname . '</span>';
+                echo '<span class="cus-mail">' . $email_value . '</span>';
+                echo '<span class="cus-phone">' . $cphone . '</span>';
             }
             
         }
