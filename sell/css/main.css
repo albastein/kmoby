@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800');
 
+* {
+    outline: none !important;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -9,6 +13,29 @@ body {
     background: #f5f6ff;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 32px;
+}
+
 .btn {
     outline: none;
 }
@@ -16,7 +43,10 @@ body {
 .mbf p,
 .cbf p,
 .acbf p {
-    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
 }
 
 #navi-link {
@@ -31,8 +61,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     color: #8790af;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 32px;
 }
 
 .text-center.page-title .title:before,
@@ -59,8 +91,10 @@ body {
     display: inline-block;
     border-radius: 50px;
     letter-spacing: 1.5px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 32px;
     -webkit-transition: 0.3s;
     -o-transition: 0.3s;
     transition: 0.3s;
@@ -89,9 +123,26 @@ body {
 }
 
 .btn-next:hover {
+    outline: none !important;
     border: 1px solid rgb(72, 44, 191);
     color: rgb(72, 44, 191);
     background: #fff;
+}
+
+.login-loader {
+    display: none;
+}
+
+.loading-image {
+    margin-bottom: -8px;
+    margin-top: -7px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: auto;
 }
 
 .footer-box .box-icon {
@@ -101,6 +152,8 @@ body {
     text-align: center;
     line-height: 75px;
     color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
     font-size: 20px;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#482cbf+0,6ac6f0+100 */
     background: rgb(72, 44, 191);
@@ -162,8 +215,10 @@ body {
 }
 
 #fset-titles {
-    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
     margin-top: 30px;
     margin-bottom: 60px;
     color: rgba(0, 0, 0, 0.664);
@@ -210,8 +265,10 @@ html {
 }
 
 .deduct {
-    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
     color: rgb(0, 0, 0);
 }
 
@@ -220,6 +277,9 @@ html {
 }
 
 .cust-pay {
+    margin: 30px auto;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 32px;
     font-size: 50px;
     font-weight: bold;
     color: rgb(46, 148, 71);
@@ -228,12 +288,16 @@ html {
 .customer-pay {
     margin-top: 25px;
     margin-bottom: -15px;
-    font-size: 30px;
-    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
     color: rgb(0, 0, 0);
 }
 
 #wlcm-ttl {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 32px;
     font-size: 30px;
     font-weight: 700;
     margin-top: 30px;
@@ -348,6 +412,9 @@ html {
 }
 
 .copyrgt {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 32px;
     font-size: 16px;
     color: #fff;
     margin-bottom: -20px;
@@ -361,9 +428,11 @@ html {
 .btn-previous {
     border-radius: 50px;
     letter-spacing: 1.5px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 32px;
     font-weight: 700;
     font-size: 14px;
-    padding: 12px 40px;
+    padding: 0 30px;
     color: #fff;
 }
 
@@ -400,6 +469,8 @@ html {
     margin-top: 20px;
     border-radius: 50px;
     letter-spacing: 1.5px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 32px;
     font-weight: 700;
     font-size: 14px;
     padding: 12px 40px;

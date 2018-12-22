@@ -2110,6 +2110,9 @@
                         <span class="collection">Ksh. 650</span>
                     </p>
                     <p class="text-center"><span class="customer-pay">You get:</span>
+                        <div class="login-loader">
+                            <img class="loading-image" src="images/ripple.gif" />
+                        </div>
                         <p class="cust-pay text-center">Ksh.
                             <span id="cust-pay"></span>
                         </p>
@@ -2142,6 +2145,8 @@
     <script>
         $(document).ready(function () {
             $(".accs-btn-next, .dtls-btn-next").click(function () {
+                $('.login-loader').show();
+                $('.cust-pay').hide();
                 $('.cust-value').remove();
                 $('.fee-value').remove();
                 let brandVal = document.getElementById("sell-wiz").elements["brand"].value;
@@ -2174,6 +2179,8 @@
                     'statusValue': statusVal,
                     'accessoryValue': accessoryVal
                 }, function () {
+                    $('.login-loader').hide();
+                    $('.cust-pay').show();
                     $(".fee-value").appendTo(".our-fees");
                     $(".cust-value").appendTo(".cust-pay");
 
