@@ -68,6 +68,39 @@ $(document).ready(function () {
         }
     });
 
+    let sowlr = $('.samsung-carousel');
+    sowlr.find('.owl-item').addClass('sowlr-item');
+
+    sowlr.find('.sowlr-item').each(function (index) {
+        $(this).attr('data-position', index); // NB: .attr() instead of .data()
+    });
+
+    $(document).on('click', '.sowlr-item', function () {
+        sowlr.trigger('to.owl.carousel', [$(this).data('position'), 500, true]);
+    });
+
+    let howlr = $('.huawei-carousel');
+    howlr.find('.owl-item').addClass('howlr-item');
+
+    howlr.find('.howlr-item').each(function (index) {
+        $(this).attr('data-position', index); // NB: .attr() instead of .data()
+    });
+
+    $(document).on('click', '.howlr-item', function () {
+        howlr.trigger('to.owl.carousel', [$(this).data('position'), 500, true]);
+    });
+
+    let iowlr = $('.iphone-carousel');
+    iowlr.find('.owl-item').addClass('iowlr-item');
+
+    iowlr.find('.iowlr-item').each(function (index) {
+        $(this).attr('data-position', index); // NB: .attr() instead of .data()
+    });
+
+    $(document).on('click', '.iowlr-item', function () {
+        iowlr.trigger('to.owl.carousel', [$(this).data('position'), 500, true]);
+    });
+
     $('.carous,.carous1').hide();
 
     $('.owl-nav').hide();
@@ -80,18 +113,42 @@ $(document).ready(function () {
         $('.owl-nav').find('.owl-prev').hide();
     }
 
+    sowlr.find('.sowlr-item').first().click(function () {
+        sowlr.find('.owl-prev').hide();
+    });
+
+    sowlr.find('.sowlr-item').last().click(function () {
+        sowlr.find('.owl-next').hide();
+    });
+
+    howlr.find('.howlr-item').first().click(function () {
+        howlr.find('.owl-prev').hide();
+    });
+
+    howlr.find('.howlr-item').last().click(function () {
+        howlr.find('.owl-next').hide();
+    });
+
+    iowlr.find('.iowlr-item').first().click(function () {
+        iowlr.find('.owl-prev').hide();
+    });
+
+    iowlr.find('.iowlr-item').last().click(function () {
+        iowlr.find('.owl-next').hide();
+    });
+
     $('.samsung-logo').click(function () {
         if ($('.carous1').find('.samsung-carousel').length) {
             $('.carous1').find('.owl-carousel').hide();
-            $('.carous1').find('.samsung-carousel').show();
+            $('.carous1').find('.samsung-carousel').fadeIn('slow');
         } else {
             if ($('.carous1').find('.owl-carousel').length) {
                 $('.carous1').find('.owl-carousel').hide();
                 $('.samsung-carousel').appendTo('.carous1');
-                $('.carous1').find('.samsung-carousel').show();
+                $('.carous1').find('.samsung-carousel').fadeIn('slow');
             } else {
                 $('.samsung-carousel').appendTo('.carous1');
-                $('.carous1').slideDown('slow');
+                $('.carous1').fadeIn('slow');
             }
         }
     });
@@ -99,15 +156,15 @@ $(document).ready(function () {
     $('.huawei-logo').click(function () {
         if ($('.carous1').find('.huawei-carousel').length) {
             $('.carous1').find('.owl-carousel').hide();
-            $('.carous1').find('.huawei-carousel').show();
+            $('.carous1').find('.huawei-carousel').fadeIn('slow');
         } else {
             if ($('.carous1').find('.owl-carousel').length) {
                 $('.carous1').find('.owl-carousel').hide();
                 $('.huawei-carousel').appendTo('.carous1');
-                $('.carous1').find('.huawei-carousel').show();
+                $('.carous1').find('.huawei-carousel').fadeIn('slow');
             } else {
                 $('.huawei-carousel').appendTo('.carous1');
-                $('.carous1').slideDown('slow');
+                $('.carous1').fadeIn('slow');
             }
         }
     });
@@ -115,15 +172,15 @@ $(document).ready(function () {
     $('.iphone-logo').click(function () {
         if ($('.carous1').find('.iphone-carousel').length) {
             $('.carous1').find('.owl-carousel').hide();
-            $('.carous1').find('.iphone-carousel').show();
+            $('.carous1').find('.iphone-carousel').fadeIn('slow');
         } else {
             if ($('.carous1').find('.owl-carousel').length) {
                 $('.carous1').find('.owl-carousel').hide();
                 $('.iphone-carousel').appendTo('.carous1');
-                $('.carous1').find('.iphone-carousel').show();
+                $('.carous1').find('.iphone-carousel').fadeIn('slow');
             } else {
                 $('.iphone-carousel').appendTo('.carous1');
-                $('.carous1').slideDown('slow');
+                $('.carous1').fadeIn('slow');
             }
         }
     });
@@ -147,7 +204,7 @@ $(document).ready(function () {
         } else {
             $(this).parents('.owl-carousel').find('.owl-item').last().prev().removeClass('selmod').find('.active').removeClass('active');
             $(this).hide();
-            $('.owl-prev').show();
+            $(this).prev().show();
         }
     });
 
@@ -161,7 +218,7 @@ $(document).ready(function () {
         } else {
             $(this).parents('.owl-carousel').find('.owl-item').first().next().removeClass('selmod').find('.active').removeClass('active');
             $(this).hide();
-            $('.owl-next').show();
+            $(this).next().show();
         }
     });
 
