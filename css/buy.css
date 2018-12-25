@@ -505,6 +505,10 @@ input:-webkit-autofill:focus {
     text-align: center;
 }
 
+.brand-group {
+    margin: 10px 0;
+}
+
 .brand-logo {
     cursor: pointer;
     height: 21px;
@@ -564,6 +568,10 @@ input:-webkit-autofill:focus {
     font-weight: 500;
     font-size: 20px;
     color: rgba(255, 255, 255, 0.623);
+}
+
+.mod:hover {
+    color: rgba(255, 255, 255, 0.85);
 }
 
 .owl-carousel {
