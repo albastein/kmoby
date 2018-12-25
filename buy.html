@@ -2,16 +2,301 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Used Phones for Sale</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta charset="utf-8">
+    <meta name="author" content="Sumon Rahman">
+    <meta name="description" content="">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neat Deals</title>
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
+    <!-- Plugin-CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/linearicons.css">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Main-Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/buy.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body>
-
+<body data-spy="scroll" data-target=".mainmenu-area">
+    <!-- Preloader-content -->
+    <div class="preloader">
+        <span><i class="lnr lnr-sun"></i></span>
+    </div>
+    <!-- MainMenu-Area -->
+    <nav class="mainmenu-area" data-spy="affix" data-offset-top="200">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#primary_menu">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="images/logo.png" alt="Logo"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="primary_menu">
+                <ul class="nav navbar-nav mainmenu">
+                    <li class="active"><a href="index.html">Home</a></li>
+                </ul>
+                <div class="login-btn right-button hidden-xs">
+                    <a class="login-txt">Log in</a>
+                </div>
+                <div class="login">
+                    <div class="arrow-up"></div>
+                    <div class="formholder">
+                        <div class="randompad">
+                            <fieldset>
+                                <label name="email">Email</label>
+                                <input class="form-holder" id="email" type="email" placeholder="example@example.com" />
+                                <label name="password">Password</label>
+                                <div class="form-group log-status">
+                                    <input class="form-holder form-control" id="paswd" type="password" />
+                                </div>
+                                <div class="login-alert alert alert-danger text-center"><span class="in-alert"></span></div>
+                                <div class="login-loader">
+                                    <img class="loading-image" src="images/double-ring.gif" />
+                                </div>
+                                <button type="button" class="log-btn">Log in</button>
+                                <span id="livalue"></span>
+                            </fieldset>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-btn right-button hidden-xs">
+                    <a class="prof-name dropdown-toggle" type="button" id="profDrop" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="true">
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="prof-down dropdown-menu" aria-labelledby="profDrop">
+                        <li><a class="ditm dash-btns" href="about.html" data-fancybox data-options='{
+                            "type" : "iframe",
+                            "scrolling" : "no", 
+                            "iframe" : {
+                                "scrolling" : "no",
+                                "preload" : false, 
+                                "css" : {
+                                    "width" : "600px", 
+                                    "border-radius" : "20px",
+                                    "overflow" : "hidden"
+                            }}}'>
+                                <i class="lnr lnr-user"></i>&nbsp; &nbsp;About Me</a></li>
+                        <li><a class="ditm dash-btns" href="orders.html" data-fancybox data-options='{
+                            "type" : "iframe",
+                            "scrolling" : "no", 
+                            "iframe" : {
+                                "scrolling" : "no",
+                                "preload" : false, 
+                                "css" : {
+                                    "width" : "600px", 
+                                    "border-radius" : "20px",
+                                    "overflow" : "hidden"
+                            }}}'>
+                                <i class="lnr lnr-cart"></i>&nbsp; &nbsp;Orders</a></li>
+                        <li><a class="ditm dash-btns" href="listings.html" data-fancybox data-options='{
+                            "type" : "iframe",
+                            "scrolling" : "no", 
+                            "iframe" : {
+                                "scrolling" : "no",
+                                "preload" : false, 
+                                "css" : {
+                                    "width" : "600px", 
+                                    "border-radius" : "20px",
+                                    "overflow" : "hidden"
+                            }}}'>
+                                <i class="lnr lnr-list"></i>&nbsp; &nbsp;Listings</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a class="ditm log-out"><i class="lnr lnr-home"></i>&nbsp; &nbsp;Log Out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- MainMenu-Area-End -->
+    <!-- Brands-Area -->
+    <div class="brands-area">
+        <div class="brand-group">
+            <img class="samsung-logo brand-logo active" src="images/samsung-logo.png">
+            <img class="huawei-logo brand-logo" src="images/huawei-logo.png">
+            <img class="iphone-logo brand-logo" src="images/iphone-logo.png">
+        </div>
+    </div>
+    <!-- Brands-Area-End-->
+    <!-- Model-Carousel -->
+    <div class="model-carousel">
+        <div class="carous1"></div>
+        <div class="carous">
+            <div class="samsung-carousel owl-carousel owl-theme">
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
+                        class="mod active">S9
+                        +</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
+                        class="mod">S9</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [2, 500, true]);"><a
+                        class="mod">S8
+                        +</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [3, 500, true]);"><a
+                        class="mod">S8</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [4, 500, true]);"><a
+                        class="mod">S7
+                        Edge</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [5, 500, true]);"><a
+                        class="mod">S7</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [6, 500, true]);"><a
+                        class="mod">S6
+                        Edge +</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [7, 500, true]);"><a
+                        class="mod">S6
+                        Edge</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [8, 500, true]);"><a
+                        class="mod">S6</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [9, 500, true]);"><a
+                        class="mod">S5</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [10, 500, true]);"><a
+                        class="mod">Note 8</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [11, 500, true]);"><a
+                        class="mod">Note 5</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [12, 500, true]);"><a
+                        class="mod">Edge</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [13, 500, true]);"><a
+                        class="mod">Note 4</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [14, 500, true]);"><a
+                        class="mod">A8 (2018)</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [15, 500, true]);"><a
+                        class="mod">A7 (2017)</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [16, 500, true]);"><a
+                        class="mod">A7 (2016)</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [17, 500, true]);"><a
+                        class="mod">A7</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [18, 500, true]);"><a
+                        class="mod">A5 (2017)</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [19, 500, true]);"><a
+                        class="mod">A5 (2016)</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [20, 500, true]);"><a
+                        class="mod">J7 (2016)</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [21, 500, true]);"><a
+                        class="mod">J7 Prime</a></div>
+                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [22, 500, true]);"><a
+                        class="mod">J5 Prime</a></div>
+            </div>
+        </div>
+        <div class="carous">
+            <div class="huawei-carousel owl-carousel owl-theme">
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
+                        class="mod active">P20
+                        Pro</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
+                        class="mod">P20</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [2, 500, true]);"><a
+                        class="mod">P20
+                        Lite</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [3, 500, true]);"><a
+                        class="mod">P10
+                        Plus</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [4, 500, true]);"><a
+                        class="mod">P10</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [5, 500, true]);"><a
+                        class="mod">P10
+                        Lite</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [6, 500, true]);"><a
+                        class="mod">P9
+                        Plus</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [7, 500, true]);"><a
+                        class="mod">P9</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [8, 500, true]);"><a
+                        class="mod">P9
+                        Lite</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [9, 500, true]);"><a
+                        class="mod">P8</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [10, 500, true]);"><a
+                        class="mod">P8
+                        Lite (2017)</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [11, 500, true]);"><a
+                        class="mod">Mate
+                        10 Pro</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [12, 500, true]);"><a
+                        class="mod">Mate
+                        10</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [13, 500, true]);"><a
+                        class="mod">Mate
+                        9</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [14, 500, true]);"><a
+                        class="mod">Mate
+                        6</a></div>
+                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [15, 500, true]);"><a
+                        class="mod">P
+                        Smart</a></div>
+            </div>
+        </div>
+        <div class="carous">
+            <div class="iphone-carousel owl-carousel owl-theme">
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
+                        class="mod active">XS
+                        Max</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
+                        class="mod">XS</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [2, 500, true]);"><a
+                        class="mod">XR</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [3, 500, true]);"><a
+                        class="mod">X</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [4, 500, true]);"><a
+                        class="mod">8
+                        Plus</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [5, 500, true]);"><a
+                        class="mod">8</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [6, 500, true]);"><a
+                        class="mod">7
+                        Plus</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [7, 500, true]);"><a
+                        class="mod">7</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [8, 500, true]);"><a
+                        class="mod">6s
+                        Plus</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [9, 500, true]);"><a
+                        class="mod">6
+                        Plus</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [10, 500, true]);"><a
+                        class="mod">6s</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [11, 500, true]);"><a
+                        class="mod">6</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [12, 500, true]);"><a
+                        class="mod">5s</a></div>
+                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [13, 500, true]);"><a
+                        class="mod">SE</a></div>
+            </div>
+        </div>
+    </div>
+    <!-- Model-Carousel-End -->
+    <!--Vendor-JS-->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/vendor/jquery-ui.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <!--Plugin-JS-->
+    <script src="js/js.cookie.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/ajaxchimp.js"></script>
+    <script src="js/scrollUp.min.js"></script>
+    <script src="js/magnific-popup.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/log.js"></script>
+    <!--Main-active-JS-->
+    <script src="js/main.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/buy.js"></script>
 </body>
 
 </html>
