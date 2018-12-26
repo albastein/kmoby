@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    // Alerts
+    $('.chocon').hide();
+
     // Model carousel
     let hucar = $('.huawei-carousel');
     let ipcar = $('.iphone-carousel');
@@ -138,6 +141,8 @@ $(document).ready(function () {
     });
 
     $('.samsung-logo').click(function () {
+        $('.chobra').hide();
+        $('.chocon').fadeIn(3000);
         $('.ws-brand').removeClass('active-ws');
         $('.brandl').removeClass('active-logo');
         $(this).parent().addClass('active-logo');
@@ -157,6 +162,8 @@ $(document).ready(function () {
     });
 
     $('.huawei-logo').click(function () {
+        $('.chobra').hide();
+        $('.chocon').fadeIn(3000);
         $('.ws-brand').removeClass('active-ws');
         $('.brandl').removeClass('active-logo');
         $(this).parent().addClass('active-logo');
@@ -176,6 +183,8 @@ $(document).ready(function () {
     });
 
     $('.iphone-logo').click(function () {
+        $('.chobra').hide();
+        $('.chocon').fadeIn(3000);
         $('.ws-brand').removeClass('active-ws');
         $('.brandl').removeClass('active-logo');
         $(this).parent().addClass('active-logo');
@@ -237,6 +246,10 @@ $(document).ready(function () {
     /* working-status-active */
 
     $('.ws-brand').click(function () {
+        if (!$('.active-logo').length) {
+            $('.chobra').fadeIn(3000);
+        }
+        $('.chocon').hide();
         $('.ws-brand').removeClass('active-ws');
         $(this).addClass('active-ws');
     });
