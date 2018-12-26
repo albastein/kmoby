@@ -138,6 +138,9 @@ $(document).ready(function () {
     });
 
     $('.samsung-logo').click(function () {
+        $('.ws-brand').removeClass('active-ws');
+        $('.brandl').removeClass('active-logo');
+        $(this).parent().addClass('active-logo');
         if ($('.carous1').find('.samsung-carousel').length) {
             $('.carous1').find('.owl-carousel').hide();
             $('.carous1').find('.samsung-carousel').fadeIn('slow');
@@ -154,6 +157,9 @@ $(document).ready(function () {
     });
 
     $('.huawei-logo').click(function () {
+        $('.ws-brand').removeClass('active-ws');
+        $('.brandl').removeClass('active-logo');
+        $(this).parent().addClass('active-logo');
         if ($('.carous1').find('.huawei-carousel').length) {
             $('.carous1').find('.owl-carousel').hide();
             $('.carous1').find('.huawei-carousel').fadeIn('slow');
@@ -170,6 +176,9 @@ $(document).ready(function () {
     });
 
     $('.iphone-logo').click(function () {
+        $('.ws-brand').removeClass('active-ws');
+        $('.brandl').removeClass('active-logo');
+        $(this).parent().addClass('active-logo');
         if ($('.carous1').find('.iphone-carousel').length) {
             $('.carous1').find('.owl-carousel').hide();
             $('.carous1').find('.iphone-carousel').fadeIn('slow');
@@ -186,6 +195,7 @@ $(document).ready(function () {
     });
 
     $('.owl-item').click(function () {
+        $('.ws-brand').removeClass('active-ws');
         $(this).parents('.owl-carousel').find('.active').removeClass('active');
         $(this).parents('.selmod').removeClass('selmod');
         if (!$(this).children('.mod').hasClass('active')) {
@@ -195,6 +205,7 @@ $(document).ready(function () {
     });
 
     $('.owl-next').click(function () {
+        $('.ws-brand').removeClass('active-ws');
         let activeel = $(this).parents('.owl-carousel').find('.active');
         activeel.parents('.owl-item').addClass('selmod');
         activeel.removeClass('active');
@@ -209,6 +220,7 @@ $(document).ready(function () {
     });
 
     $('.owl-prev').click(function () {
+        $('.ws-brand').removeClass('active-ws');
         let activeel = $(this).parents('.owl-carousel').find('.active');
         activeel.parents('.owl-item').addClass('selmod');
         activeel.removeClass('active');
@@ -220,6 +232,13 @@ $(document).ready(function () {
             $(this).hide();
             $(this).next().show();
         }
+    });
+
+    /* working-status-active */
+
+    $('.ws-brand').click(function () {
+        $('.ws-brand').removeClass('active-ws');
+        $(this).addClass('active-ws');
     });
 
 });
