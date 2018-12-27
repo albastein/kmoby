@@ -135,9 +135,9 @@
         <!-- Brands-Area -->
         <div class="brands-area">
                 <div class="brand-group">
-                        <div class="brandl"><img class="samsung-logo brand-logo" data-value="samsung" src="images/samsung-logo.png"></div>
-                        <div class="brandl"><img class="huawei-logo brand-logo" data-value="huawei" src="images/huawei-logo.png"></div>
-                        <div class="brandl"><img class="iphone-logo brand-logo" data-value="iphone" src="images/iphone-logo.png"></div>
+                        <div class="brandl" data-value="samsung"><img class="samsung-logo brand-logo" src="images/samsung-logo.png"></div>
+                        <div class="brandl" data-value="huawei"><img class="huawei-logo brand-logo" src="images/huawei-logo.png"></div>
+                        <div class="brandl" data-value="iphone"><img class="iphone-logo brand-logo" src="images/iphone-logo.png"></div>
                 </div>
         </div>
         <!-- Brands-Area-End-->
@@ -147,7 +147,7 @@
                 <div class="carous">
                         <div class="samsung-carousel owl-carousel owl-theme">
                                 <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
-                                                class="mod active" data-value="galaxy s9 plus">S9
+                                                class="mod" data-value="galaxy s9 plus">S9
                                                 +</a></div>
                                 <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
                                                 class="mod" data-value="galaxy s9">S9</a></div>
@@ -202,7 +202,7 @@
                 <div class="carous">
                         <div class="huawei-carousel owl-carousel owl-theme">
                                 <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
-                                                class="mod active" data-value="huawei p20 pro">P20
+                                                class="mod" data-value="huawei p20 pro">P20
                                                 Pro</a></div>
                                 <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
                                                 class="mod" data-value="huawei p20">P20</a></div>
@@ -250,7 +250,7 @@
                 <div class="carous">
                         <div class="iphone-carousel owl-carousel owl-theme">
                                 <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
-                                                class="mod active" data-value="iphone xs max">XS
+                                                class="mod" data-value="iphone xs max">XS
                                                 Max</a></div>
                                 <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
                                                 class="mod" data-value="iphone xs">XS</a></div>
@@ -315,6 +315,14 @@
                                 <img src="images/choose-alert-bg.svg">
                         </div>
                 </div>
+                <div class="chomod">
+                        <div class="moalert">
+                                <div class="alert-p">
+                                        <p>Select a Model</p>
+                                </div>
+                                <img src="images/choose-alert-bg.svg">
+                        </div>
+                </div>
                 <div class="chocon">
                         <div class="coalert">
                                 <div class="alert-p">
@@ -324,14 +332,68 @@
                         </div>
                 </div>
         </div>
-        <!-- Alerts-End-->
-        <!--Vendor-JS-->
+        <!-- Alerts-End -->
+        <!-- Ajax-Objects -->
+        <span class="sendvals"></span>
+        <span class="tablename"></span>
+        <!-- Ajax-Objects-End -->
+        <!-- Item-Cards -->
+        <div class="item-cards">
+                <div class="card-box">
+                        <div class="new-card-box">
+                                <div class="card-image">
+                                        <div class="phone-img">
+                                                <img src="images/header-mobile.png" alt="" height="50px" />
+                                        </div>
+                                        <div class="ph-color"><img src="images/colors/white.svg" alt="" /></div>
+                                </div>
+                                <div class="card-details">
+                                        <div class="detail-section">
+                                                <p class="ph-main-memory">128 GB</p>
+                                                <p class="ph-ram">4 GB RAM</p>
+                                                <p class="ph-rear-camera">dual 12mp rear camera</p>
+                                                <p class="ph-front-camera">12mp front camera</p>
+                                                <p class="ph-display">5.9" display</p>
+                                                <p class="ph-battery">4000 mAh battery</p>
+                                                <p class="ph-marked-price">Ksh. 75000</p>
+                                                <p class="ph-discount-price">Ksh. 63000</p>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <div class="card-box">
+                        <div class="used-card-box">
+                                <div class="card-image">
+                                        <div class="phone-img">
+                                                <img src="images/header-mobile.png" alt="" />
+                                        </div>
+                                        <div class="ph-color"><img src="images/colors/black.svg" alt="" /></div>
+                                </div>
+                                <div class="card-details">
+                                        <div class="detail-section">
+                                                <p class="ph-main-memory">64 GB</p>
+                                                <p class="ph-cable">USB Cable</p>
+                                                <p class="ph-charger">Charger</p>
+                                                <p class="ph-description">Lorem ipsum dolor sit amet, consectetur
+                                                        adipiscing
+                                                        elit. In
+                                                        bibendum
+                                                        libero a est pulvinar, sed facilisis neque scelerisque.</p>
+                                                <p class="ph-marked-price">Ksh. 84000</p>
+                                                <p class="ph-discount-price">Ksh. 45000</p>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+        <!-- Item-Cards-End -->
+        <!-- Vendor-JS -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
         <script src="js/vendor/jquery-ui.js"></script>
         <script src="js/vendor/popper.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/jquery.fancybox.min.js"></script>
-        <!--Plugin-JS-->
+        <!-- Plugin-JS -->
         <script src="js/js.cookie.js"></script>
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/contact-form.js"></script>

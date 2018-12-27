@@ -2,6 +2,8 @@ $(document).ready(function () {
 
     // Alerts
     $('.chocon').hide();
+    $('.chomod').hide();
+    $('.working-status').hide();
 
     // Model carousel
     let hucar = $('.huawei-carousel');
@@ -141,10 +143,14 @@ $(document).ready(function () {
     });
 
     $('.samsung-logo').click(function () {
+        $('.working-status').hide();
         $('.chobra').hide();
-        $('.chocon').fadeIn(3000);
+        $('.chocon').hide();
+        $('.item-cards').empty();
+        $('.chomod').fadeIn(3000);
         $('.ws-brand').removeClass('active-ws');
         $('.brandl').removeClass('active-logo');
+        $('.owl-carousel').find('.active').removeClass('active');
         $(this).parent().addClass('active-logo');
         if ($('.carous1').find('.samsung-carousel').length) {
             $('.carous1').find('.owl-carousel').hide();
@@ -162,10 +168,14 @@ $(document).ready(function () {
     });
 
     $('.huawei-logo').click(function () {
+        $('.working-status').hide();
         $('.chobra').hide();
-        $('.chocon').fadeIn(3000);
+        $('.chocon').hide();
+        $('.item-cards').empty();
+        $('.chomod').fadeIn(3000);
         $('.ws-brand').removeClass('active-ws');
         $('.brandl').removeClass('active-logo');
+        $('.owl-carousel').find('.active').removeClass('active');
         $(this).parent().addClass('active-logo');
         if ($('.carous1').find('.huawei-carousel').length) {
             $('.carous1').find('.owl-carousel').hide();
@@ -183,10 +193,14 @@ $(document).ready(function () {
     });
 
     $('.iphone-logo').click(function () {
+        $('.working-status').hide();
         $('.chobra').hide();
-        $('.chocon').fadeIn(3000);
+        $('.chocon').hide();
+        $('.item-cards').empty();
+        $('.chomod').fadeIn(3000);
         $('.ws-brand').removeClass('active-ws');
         $('.brandl').removeClass('active-logo');
+        $('.owl-carousel').find('.active').removeClass('active');
         $(this).parent().addClass('active-logo');
         if ($('.carous1').find('.iphone-carousel').length) {
             $('.carous1').find('.owl-carousel').hide();
@@ -204,41 +218,54 @@ $(document).ready(function () {
     });
 
     $('.owl-item').click(function () {
+        $('.working-status').fadeIn(400);
+        $('.chobra').hide();
+        $('.chomod').hide();
+        $('.item-cards').empty();
+        $('.chocon').fadeIn(3000);
         $('.ws-brand').removeClass('active-ws');
-        $(this).parents('.owl-carousel').find('.active').removeClass('active');
+        $('.owl-carousel').find('.active').removeClass('active');
         $(this).parents('.selmod').removeClass('selmod');
         if (!$(this).children('.mod').hasClass('active')) {
-            $(this).parents('.owl-carousel').find('.active').removeClass('active');
+            $('.owl-carousel').find('.active').removeClass('active');
             $(this).find('.mod').addClass('active');
         }
     });
 
     $('.owl-next').click(function () {
+        // No need to reveal the choose condition alert as the user will have understood it
+        // All reasons for the revealing of the alerts have been identified and handled
         $('.ws-brand').removeClass('active-ws');
-        let activeel = $(this).parents('.owl-carousel').find('.active');
+        let activeel = $('.owl-carousel').find('.active');
         activeel.parents('.owl-item').addClass('selmod');
         activeel.removeClass('active');
         $('.selmod').next('.owl-item').find('.mod').addClass('active');
         if ($('.selmod').next('.owl-item').next('.owl-item').length && $('.selmod').next('.owl-item').length) {
             $('.selmod').removeClass('selmod');
         } else {
-            $(this).parents('.owl-carousel').find('.owl-item').last().prev().removeClass('selmod').find('.active').removeClass('active');
-            $(this).hide();
+            $('.owl-carousel').find('.owl-item').last().prev().removeClass('selmod').find('.active').removeClass('active');
+            if ($('.active').length) {
+                $(this).hide();
+            }
             $(this).prev().show();
         }
     });
 
     $('.owl-prev').click(function () {
+        // No need to reveal the choose condition alert as the user will have understood it
+        // All reasons for the revealing of the alerts have been identified and handled
         $('.ws-brand').removeClass('active-ws');
-        let activeel = $(this).parents('.owl-carousel').find('.active');
+        let activeel = $('.owl-carousel').find('.active');
         activeel.parents('.owl-item').addClass('selmod');
         activeel.removeClass('active');
         $('.selmod').prev('.owl-item').find('.mod').addClass('active');
         if ($('.selmod').prev('.owl-item').prev('.owl-item').length && $('.selmod').prev('.owl-item').length) {
             $('.selmod').removeClass('selmod');
         } else {
-            $(this).parents('.owl-carousel').find('.owl-item').first().next().removeClass('selmod').find('.active').removeClass('active');
-            $(this).hide();
+            $('.owl-carousel').find('.owl-item').first().next().removeClass('selmod').find('.active').removeClass('active');
+            if ($('.active').length) {
+                $(this).hide();
+            }
             $(this).next().show();
         }
     });
@@ -249,9 +276,99 @@ $(document).ready(function () {
         if (!$('.active-logo').length) {
             $('.chobra').fadeIn(3000);
         }
+        if (!$('.active').length) {
+            $('.chomod').fadeIn(3000);
+        } else {
+            $('.chomod').hide();
+        }
         $('.chocon').hide();
         $('.ws-brand').removeClass('active-ws');
         $(this).addClass('active-ws');
+        let logoVal = $('.active-logo').data('value');
+        let modelVal = $('.owl-carousel').find('.active').data('value');
+        let stateVal = $('.active-ws').data('value');
+
+        if (logoVal === "samsung" && stateVal === "brand-new") {
+            let tableName = "new_samsungs";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "huawei" && stateVal === "brand-new") {
+            let tableName = "new_huaweis";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "iphone" && stateVal === "brand-new") {
+            let tableName = "new_iphones";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "samsung" && stateVal === "used") {
+            let tableName = "used_samsungs";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "huawei" && stateVal === "used") {
+            let tableName = "used_huaweis";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "iphone" && stateVal === "used") {
+            let tableName = "used_iphones";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "samsung" && stateVal === "excellent") {
+            let tableName = "used_samsungs";
+            let phoneModel = modelVal;
+            let workStatus = "excellent";
+            $(".sendvals").load("buy.php", {
+                'table_name': tableName,
+                'phone_model': phoneModel,
+                'working_status': workStatus
+            });
+        } else if (logoVal === "huawei" && stateVal === "excellent") {
+            let tableName = "used_huaweis";
+            let phoneModel = modelVal;
+            `11`
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "iphone" && stateVal === "excellent") {
+            let tableName = "used_iphones";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "samsung" && stateVal === "good") {
+            let tableName = "used_samsungs";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "huawei" && stateVal === "good") {
+            let tableName = "used_huaweis";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "iphone" && stateVal === "good") {
+            let tableName = "used_iphones";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "samsung" && stateVal === "damaged") {
+            let tableName = "used_samsungs";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "huawei" && stateVal === "damaged") {
+            let tableName = "used_huaweis";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        } else if (logoVal === "iphone" && stateVal === "damaged") {
+            let tableName = "used_iphones";
+            let phoneModel = modelVal;
+            alert(tableName);
+            alert(phoneModel);
+        }
     });
 
 });

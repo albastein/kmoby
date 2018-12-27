@@ -736,3 +736,67 @@ input:-webkit-autofill:focus {
     max-width: 100%;
     max-height: 100%;
 }
+
+/* Item-Cards */
+
+.item-cards {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.card-box {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.883);
+    color: rgb(67, 67, 68);
+    font-size: 13px;
+    font-weight: 600;
+    width: 400px;
+    float: left;
+    padding: 20px 10px;
+    margin: 10px 5px 5px 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.35), 0 6px 20px 0 rgba(0, 0, 0, 0.35);
+}
+
+.ph-color {
+    text-align: center;
+    justify-content: center;
+}
+
+.phone-img {
+    margin-top: 20%;
+    height: 250px;
+    text-align: center;
+    justify-content: center;
+}
+
+.card-image {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.card-details {
+    width: 60%;
+    height: 100%;
+    float: right;
+}
+
+.ph-description {
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.465);
+}
+
+.ph-marked-price {
+    color: rgb(185, 85, 85);
+    text-decoration: line-through;
+}
+
+.ph-discount-price {
+    font-size: 18px;
+}
+
+.phone-img img {
+    max-width: 100%;
+    max-height: 100%;
+}

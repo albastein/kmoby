@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('.in-alert').text('')
+    $('.in-alert').text('');
     $('.form-control').click(function () {
         $('#livalue').text('');
     });
