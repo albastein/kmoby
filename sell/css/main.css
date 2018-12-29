@@ -116,7 +116,7 @@ h3 {
 }
 
 .btn-next:focus {
-    border: 1px solid rgb(72, 44, 191);
+    outline: none !important;
     color: rgb(72, 44, 191);
     background: #fff;
     outline: none;
@@ -124,7 +124,6 @@ h3 {
 
 .btn-next:hover {
     outline: none !important;
-    border: 1px solid rgb(72, 44, 191);
     color: rgb(72, 44, 191);
     background: #fff;
 }
