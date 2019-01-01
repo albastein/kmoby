@@ -245,6 +245,7 @@ $(document).ready(function () {
     $('.owl-prev').click(function () {
         // No need to reveal the choose condition alert as the user will have understood it
         // All reasons for the revealing of the alerts have been identified and handled
+        $('.active').parents('.owl-item').prev().removeClass('selmod').find('.active').removeClass('active');
         $('.ws-brand').removeClass('active-ws');
         let activeel = $('.owl-carousel').find('.active');
         activeel.parents('.owl-item').addClass('selmod');
@@ -425,4 +426,7 @@ $(document).ready(function () {
         }
     });
 
+    $('.ph-buy').click(function () {
+        alert('testing');
+    });
 });

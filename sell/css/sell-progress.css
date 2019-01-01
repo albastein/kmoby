@@ -35,6 +35,10 @@ form fieldset {
     width: 14.285714%;
     padding: 0 5px;
     text-align: center;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    transition: all 1s;
 }
 
 .wizard-icon {
