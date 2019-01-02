@@ -61,7 +61,7 @@ if ($tableName == "used_samsungs" || $tableName == "used_huaweis" || $tableName 
                 $udivHtml .='                   <p class="ph-discount-price">Ksh. ' . $row['discount_price'] . '</p>';
                 $udivHtml .='               </div>';
                 $udivHtml .='               <div class="buy-button">';
-                $udivHtml .='                   <a data-fancybox data-type="iframe" class="ph-buy" href="buyform.html">buy</a>';
+                $udivHtml .='                   <a class="ph-buy">buy</a>';
                 $udivHtml .='               </div>';
                 $udivHtml .='           </div>';
                 $udivHtml .='       </div>';
@@ -117,7 +117,7 @@ if ($tableName == "used_samsungs" || $tableName == "used_huaweis" || $tableName 
                 $udivHtml .='                   <p class="ph-discount-price">Ksh. ' . $row['discount_price'] . '</p>';
                 $udivHtml .='               </div>';
                 $udivHtml .='               <div class="buy-button">';
-                $udivHtml .='                   <a data-fancybox data-type="iframe" class="ph-buy" href="buyform.html">buy</a>';
+                $udivHtml .='                   <a class="ph-buy">buy</a>';
                 $udivHtml .='               </div>';
                 $udivHtml .='           </div>';
                 $udivHtml .='       </div>';
@@ -174,7 +174,7 @@ if ($tableName == "used_samsungs" || $tableName == "used_huaweis" || $tableName 
             $ndivHtml .='                <p class="ph-discount-price">Ksh. ' . $row['discount_price'] . '</p>';
             $ndivHtml .='            </div>';
             $ndivHtml .='            <div class="buy-button">';
-            $ndivHtml .='                <a data-fancybox data-type="iframe" class="ph-buy" href="buyform.html">buy</a>';
+            $ndivHtml .='                <a class="ph-buy">buy</a>';
             $ndivHtml .='            </div>';
             $ndivHtml .='        </div>';
             $ndivHtml .='    </div>';
@@ -230,8 +230,6 @@ $xdivHtml .= '</div>';
 
 
 echo $xdivHtml;
-
-echo '<script src="js/buyresult.js"></script>';
 
 /*
 

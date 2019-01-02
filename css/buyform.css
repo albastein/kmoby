@@ -30,10 +30,9 @@ body {
     font-size: 16px;
     line-height: 32px;
     color: #8790af;
-    overflow-x: hidden;
 }
 
-.about-title {
+.modal-title {
     font-size: 32px;
     font-weight: 400;
     line-height: 1.4em;
@@ -157,17 +156,19 @@ body {
     /* Display the counter */
 }
 
+.label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #8790af;
+}
+
 /* Progress Bar End */
 
 .cbar {
     margin: -8px;
     background-color: rgb(242, 248, 253);
-}
-
-.dlist:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 .leftcol {
@@ -300,18 +301,29 @@ body {
 }
 
 .ph-lbl {
+    float: left;
     width: 30%;
     font-weight: 600;
+    left: 0;
+    text-align: left !important;
+}
+
+.ph-rdl {
+    float: left;
+    width: 70%;
+}
+
+.table tr:after {
+    clear: both;
 }
 
 .color-ph {
     float: left;
-    width: 50%;
+    margin-right: 30px;
 }
 
 .col-dec {
     float: left;
-    width: 50%;
 }
 
 .brand-ph {
@@ -326,6 +338,10 @@ body {
     text-transform: capitalize;
 }
 
-.ph-Image {
-    margin: 20px 0;
+.img-dec {
+    margin: 30px auto;
+}
+
+.table * {
+    border: none !important;
 }

@@ -2144,7 +2144,7 @@
     <script src="js/details.js"></script>
     <script>
         $(document).ready(function () {
-            $(".accs-btn-next, .dtls-btn-next").click(function () {
+            $(".accs-btn-next").click(function () {
                 $('.login-loader').show();
                 $('.cust-pay').hide();
                 $('.cust-value').remove();
@@ -2207,6 +2207,18 @@
                         "font-weight": "bold",
                         "color": "rgb(46, 148, 71)"
                     });
+                });
+            });
+
+            $(".dtls-btn-next").click(function () {
+                $(".cust-value").prop('Counter', 0).animate({
+                    Counter: $(".cust-value").text()
+                }, {
+                    duration: 4000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(".cust-value").text(Math.ceil(now));
+                    }
                 });
             });
         });

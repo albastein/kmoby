@@ -262,6 +262,84 @@ $(document).ready(function () {
         }
     });
 
+    function onDeviceLoad() {
+        // When the user clicks on the button, open the modal 
+        $('.ph-buy').click(function () {
+
+            let brand = $('.brand-dph').data('detail');
+            let model = $('.model-dph').data('detail');
+            let color = $(this).parents('.card-box').find('.elcolor').data('color');
+            let dprice = $(this).parents('.card-box').find('.eldprice').data('price');
+            let mprice = $(this).parents('.card-box').find('.elmprice').data('price');
+            let network = $('.network-dph').data('detail');
+            let dtype = $('.dtype-dph').data('detail');
+            let dsize = $('.dsize-dph').data('detail');
+            let resolution = $('.resolution-dph').data('detail');
+            let os = $('.os-dph').data('detail');
+            let cpu = $('.cpu-dph').data('detail');
+            let memory = $('.memory-dph').data('detail');
+            let ram = $('.ram-dph').data('detail');
+            let maincam = $('.maincam-dph').data('detail');
+            let selfie = $('.selfie-dph').data('detail');
+            let comms = $('.comms-dph').data('detail');
+            let sensors = $('.sensors-dph').data('detail');
+            let battery = $('.battery-dph').data('detail');
+
+            $('.brand-ph').text('N/A');
+            $('.model-ph').text('N/A');
+            $('.color-ph').text('N/A');
+            $('.discount-ph').text('N/A');
+            $('.price-ph').text('N/A');
+            $('.network-ph').text('N/A');
+            $('.dtype-ph').text('N/A');
+            $('.dsize-ph').text('N/A');
+            $('.resolution-ph').text('N/A');
+            $('.os-ph').text('N/A');
+            $('.cpu-ph').text('N/A');
+            $('.memory-ph').text('N/A');
+            $('.ram-ph').text('N/A');
+            $('.maincam-ph').text('N/A');
+            $('.selfie-ph').text('N/A');
+            $('.comms-ph').text('N/A');
+            $('.sensors-ph').text('N/A');
+            $('.battery-ph').text('N/A');
+
+
+            $('.brand-ph').text(brand);
+            $('.model-ph').text(model);
+            $('.color-ph').text(color);
+            $('.discount-ph').text(dprice);
+            $('.price-ph').text(mprice);
+            $('.network-ph').text(network);
+            $('.dtype-ph').text(dtype);
+            $('.dsize-ph').text(dsize);
+            $('.resolution-ph').text(resolution);
+            $('.os-ph').text(os);
+            $('.cpu-ph').text(cpu);
+            $('.memory-ph').text(memory);
+            $('.ram-ph').text(ram);
+            $('.maincam-ph').text(maincam);
+            $('.selfie-ph').text(selfie);
+            $('.comms-ph').text(comms);
+            $('.sensors-ph').text(sensors);
+            $('.battery-ph').text(battery);
+
+            $('.img-dec')
+                .attr('src', 'images/phones/' + brand + '/' + model + '.png')
+                .height(400);
+            $('.col-dec')
+                .attr('src', 'images/colors/' + color + '.svg')
+                .height(50);
+
+            $('.buyModal').css({
+                'display': 'block'
+            });
+            $('body').css({
+                'overflow': 'hidden'
+            });
+        });
+    };
+
     /* working-status-active */
 
     $('.ws-brand').click(function () {
@@ -295,6 +373,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "huawei" && stateVal === "brand-new") {
                 let tableName = "new_huaweis";
@@ -304,6 +384,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "iphone" && stateVal === "brand-new") {
                 let tableName = "new_iphones";
@@ -313,6 +395,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "samsung" && stateVal === "used") {
                 let tableName = "used_samsungs";
@@ -322,6 +406,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "huawei" && stateVal === "used") {
                 let tableName = "used_huaweis";
@@ -331,6 +417,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "iphone" && stateVal === "used") {
                 let tableName = "used_iphones";
@@ -340,6 +428,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "samsung" && stateVal === "excellent") {
                 let tableName = "used_samsungs";
@@ -349,6 +439,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "huawei" && stateVal === "excellent") {
                 let tableName = "used_huaweis";
@@ -358,6 +450,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "iphone" && stateVal === "excellent") {
                 let tableName = "used_iphones";
@@ -367,6 +461,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "samsung" && stateVal === "good") {
                 let tableName = "used_samsungs";
@@ -376,6 +472,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "huawei" && stateVal === "good") {
                 let tableName = "used_huaweis";
@@ -385,6 +483,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "iphone" && stateVal === "good") {
                 let tableName = "used_iphones";
@@ -394,6 +494,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "samsung" && stateVal === "damaged") {
                 let tableName = "used_samsungs";
@@ -403,6 +505,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "huawei" && stateVal === "damaged") {
                 let tableName = "used_huaweis";
@@ -412,6 +516,8 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             } else if (logoVal === "iphone" && stateVal === "damaged") {
                 let tableName = "used_iphones";
@@ -421,12 +527,107 @@ $(document).ready(function () {
                     'table_name': tableName,
                     'phone_model': phoneModel,
                     'working_status': workStatus
+                }, function () {
+                    onDeviceLoad();
                 });
             }
         }
     });
 
-    $('.ph-buy').click(function () {
-        alert('testing');
+    // progress bar seeker
+    var $point_arr, $points, $progress, $trigger, active, max, tracker, val;
+
+    $trigger = $('.trigger').first();
+    $points = $('.progress-points').first();
+    $point_arr = $('.progress-point');
+    $progress = $('.progress').first();
+
+    val = +$points.data('current') - 1;
+    max = $point_arr.length - 1;
+    tracker = active = 0;
+
+    function activate(index) {
+        if (index !== active) {
+            active = index;
+            var $_active = $point_arr.eq(active);
+
+            $point_arr
+                .removeClass('completed active')
+                .slice(0, active).addClass('completed');
+
+            $_active.addClass('active');
+
+            return $progress.css('width', (index / max * 100) + "%");
+        }
+    };
+
+    setTimeout((function () {
+        return activate(val);
+    }), 1000);
+
+    // Progress Bar Seeker End   
+
+    $('.dtls-next').click(function () {
+        $('.ph-details').hide();
+        $('.contacts').fadeIn(800);
+        var _index;
+        _index = 1;
+        tracker = _index === 0 ? 1 : _index === val ? 0 : tracker;
+
+        return activate(_index);
+    });
+
+    $('.con-prev').click(function () {
+        $('.contacts').hide();
+        $('.ph-details').fadeIn(800);
+        var _index;
+        _index = 0;
+        tracker = _index === 0 ? 1 : _index === val ? 0 : tracker;
+
+        return activate(_index);
+    });
+
+    $('.con-next').click(function () {
+        $('.contacts').hide();
+        $('.thanks-for-order').fadeIn(800);
+        var _index;
+        _index = 2;
+        tracker = _index === 0 ? 1 : _index === val ? 0 : tracker;
+
+        return activate(_index);
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    $('.modClose').click(function () {
+        $('.contacts, .thanks-for-order').hide();
+        $('.ph-details').fadeIn(800);
+        $('.buyModal').css('display', 'none');
+        $('body').css({
+            'overflow': 'scroll',
+            'overflow-x': 'hidden'
+        });
+        var _index;
+        _index = 0;
+        tracker = _index === 0 ? 1 : _index === val ? 0 : tracker;
+
+        return activate(_index);
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    $('.buyModal').click(function (e) {
+        if (e.target.className == 'buyModal') {
+            $('.contacts, .thanks-for-order').hide();
+            $('.ph-details').fadeIn(800);
+            $(this).css('display', 'none');
+            $('body').css({
+                'overflow': 'scroll',
+                'overflow-x': 'hidden'
+            });
+            var _index;
+            _index = 0;
+            tracker = _index === 0 ? 1 : _index === val ? 0 : tracker;
+
+            return activate(_index);
+        }
     });
 });

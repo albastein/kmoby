@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/buy.css">
         <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/buyform.css">
         <link rel="stylesheet" href="css/responsive.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
@@ -132,280 +133,445 @@
                 </div>
         </nav>
         <!-- MainMenu-Area-End -->
-        <!-- Brands-Area -->
-        <div class="brands-area">
-                <div class="brand-group">
-                        <div class="brandl" data-value="samsung"><img class="samsung-logo brand-logo" src="images/samsung-logo.png"></div>
-                        <div class="brandl" data-value="huawei"><img class="huawei-logo brand-logo" src="images/huawei-logo.png"></div>
-                        <div class="brandl" data-value="iphone"><img class="iphone-logo brand-logo" src="images/iphone-logo.png"></div>
-                </div>
-        </div>
-        <!-- Brands-Area-End-->
-        <!-- Model-Carousel -->
-        <div class="model-carousel">
-                <div class="carous1"></div>
-                <div class="carous">
-                        <div class="samsung-carousel owl-carousel owl-theme">
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
-                                                class="mod" data-value="galaxy s9 plus">S9
-                                                +</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
-                                                class="mod" data-value="galaxy s9">S9</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [2, 500, true]);"><a
-                                                class="mod" data-value="galaxy s8 plus">S8
-                                                +</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [3, 500, true]);"><a
-                                                class="mod" data-value="galaxy s8">S8</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [4, 500, true]);"><a
-                                                class="mod" data-value="galaxy s7 edge">S7
-                                                Edge</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [5, 500, true]);"><a
-                                                class="mod" data-value="galaxy s7">S7</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [6, 500, true]);"><a
-                                                class="mod" data-value="galaxy s6 edge plus">S6
-                                                Edge +</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [7, 500, true]);"><a
-                                                class="mod" data-value="galaxy s6 edge">S6
-                                                Edge</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [8, 500, true]);"><a
-                                                class="mod" data-value="galaxy s6">S6</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [9, 500, true]);"><a
-                                                class="mod" data-value="galaxy s5">S5</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [10, 500, true]);"><a
-                                                class="mod" data-value="galaxy note 8">Note 8</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [11, 500, true]);"><a
-                                                class="mod" data-value="galaxy note 5">Note 5</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [12, 500, true]);"><a
-                                                class="mod" data-value="galaxy edge">Edge</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [13, 500, true]);"><a
-                                                class="mod" data-value="galaxy note 4">Note 4</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [14, 500, true]);"><a
-                                                class="mod" data-value="galaxy a8 (2018)">A8 (2018)</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [15, 500, true]);"><a
-                                                class="mod" data-value="galaxy a7 (2017)">A7 (2017)</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [16, 500, true]);"><a
-                                                class="mod" data-value="galaxy a7 (2016)">A7 (2016)</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [17, 500, true]);"><a
-                                                class="mod" data-value="galaxy a7">A7</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [18, 500, true]);"><a
-                                                class="mod" data-value="galaxy a5 (2017)">A5 (2017)</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [19, 500, true]);"><a
-                                                class="mod" data-value="galaxy a5 (2016)">A5 (2016)</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [20, 500, true]);"><a
-                                                class="mod" data-value="galaxy j7 (2016)">J7 (2016)</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [21, 500, true]);"><a
-                                                class="mod" data-value="galaxy j7 prime">J7 Prime</a></div>
-                                <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [22, 500, true]);"><a
-                                                class="mod" data-value="galaxy j5 prime">J5 Prime</a></div>
+        <div class="content-body">
+                <!-- Brands-Area -->
+                <div class="brands-area">
+                        <div class="brand-group">
+                                <div class="brandl" data-value="samsung"><img class="samsung-logo brand-logo" src="images/samsung-logo.png"></div>
+                                <div class="brandl" data-value="huawei"><img class="huawei-logo brand-logo" src="images/huawei-logo.png"></div>
+                                <div class="brandl" data-value="iphone"><img class="iphone-logo brand-logo" src="images/iphone-logo.png"></div>
                         </div>
                 </div>
-                <div class="carous">
-                        <div class="huawei-carousel owl-carousel owl-theme">
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
-                                                class="mod" data-value="huawei p20 pro">P20
-                                                Pro</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
-                                                class="mod" data-value="huawei p20">P20</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [2, 500, true]);"><a
-                                                class="mod" data-value="huawei p20 lite">P20
-                                                Lite</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [3, 500, true]);"><a
-                                                class="mod" data-value="huawei p10 plus">P10
-                                                Plus</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [4, 500, true]);"><a
-                                                class="mod" data-value="huawei p10">P10</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [5, 500, true]);"><a
-                                                class="mod" data-value="huawei p10 lite">P10
-                                                Lite</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [6, 500, true]);"><a
-                                                class="mod" data-value="huawei p9 plus">P9
-                                                Plus</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [7, 500, true]);"><a
-                                                class="mod" data-value="huawei p9">P9</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [8, 500, true]);"><a
-                                                class="mod" data-value="huawei p9 lite">P9
-                                                Lite</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [9, 500, true]);"><a
-                                                class="mod" data-value="huawei p8">P8</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [10, 500, true]);"><a
-                                                class="mod" data-value="huawei p8 lite (2017)">P8
-                                                Lite (2017)</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [11, 500, true]);"><a
-                                                class="mod" data-value="huawei mate 10 pro">Mate
-                                                10 Pro</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [12, 500, true]);"><a
-                                                class="mod" data-value="huawei mate 10">Mate
-                                                10</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [13, 500, true]);"><a
-                                                class="mod" data-value="huawei mate 9">Mate
-                                                9</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [14, 500, true]);"><a
-                                                class="mod" data-value="huawei mate 6">Mate
-                                                6</a></div>
-                                <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [15, 500, true]);"><a
-                                                class="mod" data-value="huawei p smart">P
-                                                Smart</a></div>
-                        </div>
-                </div>
-                <div class="carous">
-                        <div class="iphone-carousel owl-carousel owl-theme">
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
-                                                class="mod" data-value="iphone xs max">XS
-                                                Max</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
-                                                class="mod" data-value="iphone xs">XS</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [2, 500, true]);"><a
-                                                class="mod" data-value="iphone xr">XR</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [3, 500, true]);"><a
-                                                class="mod" data-value="iphone x">X</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [4, 500, true]);"><a
-                                                class="mod" data-value="iphone 8 plus">8
-                                                Plus</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [5, 500, true]);"><a
-                                                class="mod" data-value="iphone 8">8</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [6, 500, true]);"><a
-                                                class="mod" data-value="iphone 7 plus">7
-                                                Plus</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [7, 500, true]);"><a
-                                                class="mod" data-value="iphone 7">7</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [8, 500, true]);"><a
-                                                class="mod" data-value="iphone 6s plus">6s
-                                                Plus</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [9, 500, true]);"><a
-                                                class="mod" data-value="iphone 6 plus">6
-                                                Plus</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [10, 500, true]);"><a
-                                                class="mod" data-value="iphone 6s">6s</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [11, 500, true]);"><a
-                                                class="mod" data-value="iphone 6">6</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [12, 500, true]);"><a
-                                                class="mod" data-value="iphone 5s">5s</a></div>
-                                <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [13, 500, true]);"><a
-                                                class="mod" data-value="iphone se">SE</a></div>
-                        </div>
-                </div>
-        </div>
-        <!-- Model-Carousel-End -->
-        <!-- Working-Status-->
-        <div class="working-status">
-                <div class="ws-brand ws-brand-new" data-value="brand-new">
-                        <a>Brand New <i class="fa fa-star"></i></a>
-                </div>
-                <div class="ws-brand ws-used" data-value="used">
-                        <a>Used</a>
-                </div>
-                <div class="ws-brand ws-excellent" data-value="excellent">
-                        <a>Excellent</a>
-                </div>
-                <div class="ws-brand ws-good" data-value="good">
-                        <a>Good</a>
-                </div>
-                <div class="ws-brand ws-damaged" data-value="damaged">
-                        <a>Damaged</a>
-                </div>
-        </div>
-        <!-- Working-Status-End -->
-        <!-- Alerts -->
-        <div class="alerts">
-                <div class="chobra">
-                        <div class="bralert">
-                                <div class="alert-p">
-                                        <p>Select a Brand</p>
+                <!-- Brands-Area-End-->
+                <!-- Model-Carousel -->
+                <div class="model-carousel">
+                        <div class="carous1"></div>
+                        <div class="carous">
+                                <div class="samsung-carousel owl-carousel owl-theme">
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
+                                                        class="mod" data-value="galaxy s9 plus">S9
+                                                        +</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
+                                                        class="mod" data-value="galaxy s9">S9</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [2, 500, true]);"><a
+                                                        class="mod" data-value="galaxy s8 plus">S8
+                                                        +</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [3, 500, true]);"><a
+                                                        class="mod" data-value="galaxy s8">S8</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [4, 500, true]);"><a
+                                                        class="mod" data-value="galaxy s7 edge">S7
+                                                        Edge</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [5, 500, true]);"><a
+                                                        class="mod" data-value="galaxy s7">S7</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [6, 500, true]);"><a
+                                                        class="mod" data-value="galaxy s6 edge plus">S6
+                                                        Edge +</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [7, 500, true]);"><a
+                                                        class="mod" data-value="galaxy s6 edge">S6
+                                                        Edge</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [8, 500, true]);"><a
+                                                        class="mod" data-value="galaxy s6">S6</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [9, 500, true]);"><a
+                                                        class="mod" data-value="galaxy s5">S5</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [10, 500, true]);"><a
+                                                        class="mod" data-value="galaxy note 8">Note 8</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [11, 500, true]);"><a
+                                                        class="mod" data-value="galaxy note 5">Note 5</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [12, 500, true]);"><a
+                                                        class="mod" data-value="galaxy edge">Edge</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [13, 500, true]);"><a
+                                                        class="mod" data-value="galaxy note 4">Note 4</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [14, 500, true]);"><a
+                                                        class="mod" data-value="galaxy a8 (2018)">A8 (2018)</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [15, 500, true]);"><a
+                                                        class="mod" data-value="galaxy a7 (2017)">A7 (2017)</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [16, 500, true]);"><a
+                                                        class="mod" data-value="galaxy a7 (2016)">A7 (2016)</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [17, 500, true]);"><a
+                                                        class="mod" data-value="galaxy a7">A7</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [18, 500, true]);"><a
+                                                        class="mod" data-value="galaxy a5 (2017)">A5 (2017)</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [19, 500, true]);"><a
+                                                        class="mod" data-value="galaxy a5 (2016)">A5 (2016)</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [20, 500, true]);"><a
+                                                        class="mod" data-value="galaxy j7 (2016)">J7 (2016)</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [21, 500, true]);"><a
+                                                        class="mod" data-value="galaxy j7 prime">J7 Prime</a></div>
+                                        <div class="mod-item" onclick="$('.samsung-carousel').trigger('to.owl.carousel', [22, 500, true]);"><a
+                                                        class="mod" data-value="galaxy j5 prime">J5 Prime</a></div>
                                 </div>
-                                <img src="images/choose-alert-bg.svg">
                         </div>
-                </div>
-                <div class="chomod">
-                        <div class="moalert">
-                                <div class="alert-p">
-                                        <p>Select a Model</p>
+                        <div class="carous">
+                                <div class="huawei-carousel owl-carousel owl-theme">
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
+                                                        class="mod" data-value="huawei p20 pro">P20
+                                                        Pro</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
+                                                        class="mod" data-value="huawei p20">P20</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [2, 500, true]);"><a
+                                                        class="mod" data-value="huawei p20 lite">P20
+                                                        Lite</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [3, 500, true]);"><a
+                                                        class="mod" data-value="huawei p10 plus">P10
+                                                        Plus</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [4, 500, true]);"><a
+                                                        class="mod" data-value="huawei p10">P10</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [5, 500, true]);"><a
+                                                        class="mod" data-value="huawei p10 lite">P10
+                                                        Lite</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [6, 500, true]);"><a
+                                                        class="mod" data-value="huawei p9 plus">P9
+                                                        Plus</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [7, 500, true]);"><a
+                                                        class="mod" data-value="huawei p9">P9</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [8, 500, true]);"><a
+                                                        class="mod" data-value="huawei p9 lite">P9
+                                                        Lite</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [9, 500, true]);"><a
+                                                        class="mod" data-value="huawei p8">P8</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [10, 500, true]);"><a
+                                                        class="mod" data-value="huawei p8 lite (2017)">P8
+                                                        Lite (2017)</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [11, 500, true]);"><a
+                                                        class="mod" data-value="huawei mate 10 pro">Mate
+                                                        10 Pro</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [12, 500, true]);"><a
+                                                        class="mod" data-value="huawei mate 10">Mate
+                                                        10</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [13, 500, true]);"><a
+                                                        class="mod" data-value="huawei mate 9">Mate
+                                                        9</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [14, 500, true]);"><a
+                                                        class="mod" data-value="huawei mate 6">Mate
+                                                        6</a></div>
+                                        <div class="mod-item" onclick="$('.huawei-carousel').trigger('to.owl.carousel', [15, 500, true]);"><a
+                                                        class="mod" data-value="huawei p smart">P
+                                                        Smart</a></div>
                                 </div>
-                                <img src="images/choose-alert-bg.svg">
                         </div>
-                </div>
-                <div class="chocon">
-                        <div class="coalert">
-                                <div class="alert-p">
-                                        <p>Select Condition</p>
+                        <div class="carous">
+                                <div class="iphone-carousel owl-carousel owl-theme">
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [0, 500, true]);"><a
+                                                        class="mod" data-value="iphone xs max">XS
+                                                        Max</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [1, 500, true]);"><a
+                                                        class="mod" data-value="iphone xs">XS</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [2, 500, true]);"><a
+                                                        class="mod" data-value="iphone xr">XR</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [3, 500, true]);"><a
+                                                        class="mod" data-value="iphone x">X</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [4, 500, true]);"><a
+                                                        class="mod" data-value="iphone 8 plus">8
+                                                        Plus</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [5, 500, true]);"><a
+                                                        class="mod" data-value="iphone 8">8</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [6, 500, true]);"><a
+                                                        class="mod" data-value="iphone 7 plus">7
+                                                        Plus</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [7, 500, true]);"><a
+                                                        class="mod" data-value="iphone 7">7</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [8, 500, true]);"><a
+                                                        class="mod" data-value="iphone 6s plus">6s
+                                                        Plus</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [9, 500, true]);"><a
+                                                        class="mod" data-value="iphone 6 plus">6
+                                                        Plus</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [10, 500, true]);"><a
+                                                        class="mod" data-value="iphone 6s">6s</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [11, 500, true]);"><a
+                                                        class="mod" data-value="iphone 6">6</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [12, 500, true]);"><a
+                                                        class="mod" data-value="iphone 5s">5s</a></div>
+                                        <div class="mod-item" onclick="$('.iphone-carousel').trigger('to.owl.carousel', [13, 500, true]);"><a
+                                                        class="mod" data-value="iphone se">SE</a></div>
                                 </div>
-                                <img src="images/choose-alert-bg.svg">
                         </div>
                 </div>
-        </div>
-        <!-- Alerts-End -->
-        <!-- Ajax-Objects -->
-        <span class="sendvals"></span>
-        <span class="tablename"></span>
-        <!-- Ajax-Objects-End -->
-        <!--
-        <div class="item-cards">
-                <div class="card-box">
-                        <div class="new-card-box">
-                                <div class="card-image">
-                                        <div class="phone-img">
-                                                <img src="images/header-mobile.png" alt="" height="50px" />
+                <!-- Model-Carousel-End -->
+                <!-- Working-Status-->
+                <div class="working-status">
+                        <div class="ws-brand ws-brand-new" data-value="brand-new">
+                                <a>Brand New <i class="fa fa-star"></i></a>
+                        </div>
+                        <div class="ws-brand ws-used" data-value="used">
+                                <a>Used</a>
+                        </div>
+                        <div class="ws-brand ws-excellent" data-value="excellent">
+                                <a>Excellent</a>
+                        </div>
+                        <div class="ws-brand ws-good" data-value="good">
+                                <a>Good</a>
+                        </div>
+                        <div class="ws-brand ws-damaged" data-value="damaged">
+                                <a>Damaged</a>
+                        </div>
+                </div>
+                <!-- Working-Status-End -->
+                <!-- Alerts -->
+                <div class="alerts">
+                        <div class="chobra">
+                                <div class="bralert">
+                                        <div class="alert-p">
+                                                <p>Select a Brand</p>
                                         </div>
-                                        <div class="ph-color"><img src="images/colors/white.svg" alt="" /></div>
+                                        <img src="images/choose-alert-bg.svg">
                                 </div>
-                                <div class="card-details">
-                                        <div class="detail-section">
-                                                <p class="ph-main-memory">128 GB</p>
-                                                <p class="ph-ram">4 GB RAM</p>
-                                                <p class="ph-rear-camera">dual 12mp rear camera</p>
-                                                <p class="ph-front-camera">12mp front camera</p>
-                                                <p class="ph-display">5.9" display</p>
-                                                <p class="ph-battery">4000 mAh battery</p>
-                                                <p class="ph-marked-price">Ksh. 75000</p>
-                                                <p class="ph-discount-price">Ksh. 63000</p>
+                        </div>
+                        <div class="chomod">
+                                <div class="moalert">
+                                        <div class="alert-p">
+                                                <p>Select a Model</p>
                                         </div>
+                                        <img src="images/choose-alert-bg.svg">
+                                </div>
+                        </div>
+                        <div class="chocon">
+                                <div class="coalert">
+                                        <div class="alert-p">
+                                                <p>Select Condition</p>
+                                        </div>
+                                        <img src="images/choose-alert-bg.svg">
                                 </div>
                         </div>
                 </div>
-                <div class="card-box">
-                        <div class="used-card-box">
-                                <div class="card-image">
-                                        <div class="phone-img">
-                                                <img src="images/header-mobile.png" alt="" />
-                                        </div>
-                                        <div class="ph-color"><img src="images/colors/black.svg" alt="" /></div>
-                                </div>
-                                <div class="card-details">
-                                        <div class="detail-section">
-                                                <p class="ph-main-memory">64 GB</p>
-                                                <p class="ph-cable">USB Cable</p>
-                                                <p class="ph-charger">Charger</p>
-                                                <p class="ph-description">Lorem ipsum dolor sit amet, consectetur
-                                                        adipiscing
-                                                        elit. In
-                                                        bibendum
-                                                        libero a est pulvinar, sed facilisis neque scelerisque.</p>
-                                                <p class="ph-marked-price">Ksh. 84000</p>
-                                                <p class="ph-discount-price">Ksh. 45000</p>
-                                        </div>
-                                </div>
-                        </div>
-                </div>
-        </div>
--->
-        <!-- Modal -->
-        <div class="modal fade" id="myModal">
-                <div class="modal-dialog">
-                        <div class="modal-content bmd-modalContent">
+                <!-- Alerts-End -->
+                <!-- Ajax-Objects -->
 
-                                <div class="modal-body">
+                <span class="sendvals"></span>
+                <span class="tablename"></span>
+                <!-- Ajax-Objects-End -->
+        </div>
 
-                                        <div class="close-button">
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                                                                aria-hidden="true">&times;</span></button>
+        <!-- The Modal -->
+        <div id="buyModal" class="buyModal">
+
+                <!-- Modal content -->
+                <div class="buyModal-content">
+                        <span class="modClose">&times;</span>
+                        <div class="dash-wrapper">
+                                <div class="cbar">
+                                        <h3 class="modal-title">Please Confirm your Details</h3>
+                                </div>
+                                <!-- Progress Bar -->
+                                <div class="progress-meter">
+                                        <div class="track">
+                                                <span class="progress"></span>
                                         </div>
-                                        <div class="embed-responsive embed-responsive-16by9">
-                                                <iframe class="embed-responsive-item" frameborder="0"></iframe>
+                                        <ol class="progress-points" data-current="1">
+                                                <li class="progress-point prop1">
+                                                        <span class="label">Phone</span>
+                                                </li>
+                                                <li class="progress-point prop2">
+                                                        <span class="label">Contact</span>
+                                                </li>
+                                                <li class="progress-point prop3">
+                                                        <span class="label">Finish</span>
+                                                </li>
+                                        </ol>
+                                </div>
+                                <!-- Progress Bar End -->
+                                <span class="image-ph"></span>
+                                <div class="ph-details">
+                                        <div class="ph-image">
+                                                <img class="img-dec" src="#" alt="" />
+                                        </div>
+                                        <table class="table table-dark table-striped">
+                                                <tbody>
+                                                        <tr class="ph-brand">
+                                                                <td class="ph-lbl">Brand</td>
+                                                                <td class="ph-rdl brand-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-model">
+                                                                <td class="ph-lbl">Model</td>
+                                                                <td class="ph-rdl model-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-color">
+                                                                <td class="ph-lbl">Color</td>
+                                                                <td class="ph-rdl">
+                                                                        <span class="color-ph"></span>
+                                                                        <img class="col-dec" src="#" alt="" />
+                                                                </td>
+                                                        </tr>
+                                                        <tr class="ph-network">
+                                                                <td class="ph-lbl">Network</td>
+                                                                <td class="ph-rdl network-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-dtype">
+                                                                <td class="ph-lbl">Display Type</td>
+                                                                <td class="ph-rdl dtype-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-dsize">
+                                                                <td class="ph-lbl">Display Size</td>
+                                                                <td class="ph-rdl dsize-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-resolution">
+                                                                <td class="ph-lbl">Resolution</td>
+                                                                <td class="ph-rdl resolution-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-os">
+                                                                <td class="ph-lbl">Operating System</td>
+                                                                <td class="ph-rdl os-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-cpu">
+                                                                <td class="ph-lbl">CPU</td>
+                                                                <td class="ph-rdl cpu-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-memory">
+                                                                <td class="ph-lbl">Internal Memory</td>
+                                                                <td class="ph-rdl memory-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-ram">
+                                                                <td class="ph-lbl">RAM</td>
+                                                                <td class="ph-rdl ram-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-maincam">
+                                                                <td class="ph-lbl">Main Camera</td>
+                                                                <td class="ph-rdl maincam-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-selfie">
+                                                                <td class="ph-lbl">Front Camera</td>
+                                                                <td class="ph-rdl selfie-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-comms">
+                                                                <td class="ph-lbl">COMMS</td>
+                                                                <td class="ph-rdl comms-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-sensors">
+                                                                <td class="ph-lbl">Sensors</td>
+                                                                <td class="ph-rdl sensors-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-battery">
+                                                                <td class="ph-lbl">Battery</td>
+                                                                <td class="ph-rdl battery-ph"></td>
+                                                        </tr>
+                                                        <tr class="ph-price">
+                                                                <td class="ph-lbl">Marked Price</td>
+                                                                <td class="ph-rdl">Ksh. <span class="price-ph"></span></td>
+                                                        </tr>
+                                                        <tr class="ph-discount">
+                                                                <td class="ph-lbl">Discount</td>
+                                                                <td class="ph-rdl di">Ksh. <span class="discount-ph"></span></td>
+                                                        </tr>
+                                                </tbody>
+                                        </table>
+                                        <div class="fset-btns">
+                                                <a class="dtls-next in-next place-order">Next</a>
                                         </div>
                                 </div>
+                                <div class="contacts">
+                                        <div class="unames">
+                                                <div class="fname">
+                                                        <label class="lbls in-fname" for="in-fname">First Name</label>
+                                                        <br>
+                                                        <input id="in-fname" class="inputs" type="text">
+                                                        <br>
+                                                </div>
+                                                <div class="lname">
+                                                        <label class="lbls in-lname" for="in-lname">Last Name</label>
+                                                        <br>
+                                                        <input id="in-lname" class="inputs" type="text">
+                                                        <br>
+                                                </div>
+                                        </div>
+                                        <label class="lbls in-phone" for="in-phone">Phone</label>
+                                        <br>
+                                        <input id="in-phone" class="inputs" type="text">
+                                        <br>
+                                        <label class="lbls in-email" for="in-email">Email</label>
+                                        <br>
+                                        <input id="in-email" class="inputs" type="text">
+                                        <br>
+                                        <label class="lbls in-county" for="in-county">County</label>
+                                        <br>
+                                        <input id="in-county" class="inputs" type="text">
+                                        <br>
+                                        <label class="lbls in-town" for="in-town">Nearest Town</label>
+                                        <br>
+                                        <input id="in-town" class="inputs" type="text">
+                                        <br>
+                                        <label class="lbls in-ward" for="in-ward">Ward</label>
+                                        <br>
+                                        <input id="in-ward" class="inputs" type="text">
+                                        <br>
+                                        <div class="fset-btns">
+                                                <a class="con-prev in-back back-btn">back</a>
+                                                <a class="con-next in-next place-order">Place order</a>
+                                        </div>
+                                </div>
+                                <div class="thanks-for-order">
+                                        <div class="process-details"></div>
+                                        <div class="fset-btns">
+                                                <a href="orders.html" class="in-next orders-dboard">My Orders</a>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
 
-                        </div><!-- /.modal-content -->
-                </div><!-- /.modal-dialog -->
-        </div><!-- /.modal -->
+        </div>
+        <!-- End Modal -->
+        <!-- Footer-Area -->
+        <footer class="footer-area" id="contact_page">
+                <div class="section-padding">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-xs-12">
+                                                <div class="page-title text-center">
+                                                        <h5 class="title">Contact US</h5>
+                                                        <h3 class="dark-color">Find Us By The Following Details</h3>
+                                                        <div class="space-60"></div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-xs-12 col-sm-4">
+                                                <div class="footer-box">
+                                                        <div class="box-icon">
+                                                                <span class="lnr lnr-map-marker"></span>
+                                                        </div>
+                                                        <p>8-54 Central Building <br /> 60 Moi Avenue, Nairobi, Kenya</p>
+                                                </div>
+                                                <div class="space-30 hidden visible-xs"></div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4">
+                                                <div class="footer-box">
+                                                        <div class="box-icon">
+                                                                <span class="lnr lnr-phone-handset"></span>
+                                                        </div>
+                                                        <p>+254 710 310806 <br /> +254 732 723456</p>
+                                                </div>
+                                                <div class="space-30 hidden visible-xs"></div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4">
+                                                <div class="footer-box">
+                                                        <div class="box-icon">
+                                                                <span class="lnr lnr-envelope"></span>
+                                                        </div>
+                                                        <p>kmoby@yahoo.com <br /> kmoby@gmail.com
+                                                        </p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <!-- Footer-Bootom -->
+                <div class="footer-bottom">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-xs-12 col-md-5">
+                                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                                <span>Copyright &copy;<script>
+                                                                document.write(new Date().getFullYear());
+                                                        </script> All rights reserved | This template was made with <i
+                                                                class="lnr lnr-heart" aria-hidden="true"></i> by <a
+                                                                href="https://colorlib.com" target="_blank">Colorlib</a></span>
+                                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                                <div class="space-30 hidden visible-xs"></div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+                <!-- Footer-Bootom-End -->
+        </footer>
 
         <!-- Vendor-JS -->
         <script src="js/vendor/jquery-1.12.4.min.js"></script>
