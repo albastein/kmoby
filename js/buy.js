@@ -1,3 +1,11 @@
+// Fix for bootstrap tooltips, sometimes they are left in the DOM when they shouldn't be.
+$('body').on('hidden.bs.tooltip', function () {
+    var tooltips = $('.tooltip').not('.in');
+    if (tooltips) {
+        tooltips.remove();
+    }
+});
+
 $(document).ready(function () {
 
     // Alerts
@@ -284,6 +292,7 @@ $(document).ready(function () {
             let comms = $('.comms-dph').data('detail');
             let sensors = $('.sensors-dph').data('detail');
             let battery = $('.battery-dph').data('detail');
+            prodID = $(this).parents('.card-box').find('.elid').data('id');
 
             $('.brand-ph').text('N/A');
             $('.model-ph').text('N/A');
@@ -340,13 +349,16 @@ $(document).ready(function () {
     };
 
     /* working-status-active */
+    let modelVal = '';
+    let workStatus = '';
+    let prodID = '';
 
     $('.ws-brand').click(function () {
         $('.chocon').hide();
         $('.ws-brand').removeClass('active-ws');
         $(this).addClass('active-ws');
         let logoVal = $('.active-logo').data('value');
-        let modelVal = $('.owl-carousel').find('.active').data('value');
+        modelVal = $('.owl-carousel').find('.active').data('value');
         let stateVal = $('.active-ws').data('value');
 
         if (logoVal == null || modelVal == null || stateVal == null) {
@@ -367,7 +379,7 @@ $(document).ready(function () {
             if (logoVal === "samsung" && stateVal === "brand-new") {
                 let tableName = "new_samsungs";
                 let phoneModel = modelVal;
-                let workStatus = "brand_new";
+                workStatus = "brand_new";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -378,7 +390,7 @@ $(document).ready(function () {
             } else if (logoVal === "huawei" && stateVal === "brand-new") {
                 let tableName = "new_huaweis";
                 let phoneModel = modelVal;
-                let workStatus = "brand_new";
+                workStatus = "brand_new";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -389,7 +401,7 @@ $(document).ready(function () {
             } else if (logoVal === "iphone" && stateVal === "brand-new") {
                 let tableName = "new_iphones";
                 let phoneModel = modelVal;
-                let workStatus = "brand_new";
+                workStatus = "brand_new";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -400,7 +412,7 @@ $(document).ready(function () {
             } else if (logoVal === "samsung" && stateVal === "used") {
                 let tableName = "used_samsungs";
                 let phoneModel = modelVal;
-                let workStatus = "used";
+                workStatus = "used";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -411,7 +423,7 @@ $(document).ready(function () {
             } else if (logoVal === "huawei" && stateVal === "used") {
                 let tableName = "used_huaweis";
                 let phoneModel = modelVal;
-                let workStatus = "used";
+                workStatus = "used";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -422,7 +434,7 @@ $(document).ready(function () {
             } else if (logoVal === "iphone" && stateVal === "used") {
                 let tableName = "used_iphones";
                 let phoneModel = modelVal;
-                let workStatus = "used";
+                workStatus = "used";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -433,7 +445,7 @@ $(document).ready(function () {
             } else if (logoVal === "samsung" && stateVal === "excellent") {
                 let tableName = "used_samsungs";
                 let phoneModel = modelVal;
-                let workStatus = "excellent";
+                workStatus = "excellent";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -444,7 +456,7 @@ $(document).ready(function () {
             } else if (logoVal === "huawei" && stateVal === "excellent") {
                 let tableName = "used_huaweis";
                 let phoneModel = modelVal;
-                let workStatus = "excellent";
+                workStatus = "excellent";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -455,7 +467,7 @@ $(document).ready(function () {
             } else if (logoVal === "iphone" && stateVal === "excellent") {
                 let tableName = "used_iphones";
                 let phoneModel = modelVal;
-                let workStatus = "excellent";
+                workStatus = "excellent";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -466,7 +478,7 @@ $(document).ready(function () {
             } else if (logoVal === "samsung" && stateVal === "good") {
                 let tableName = "used_samsungs";
                 let phoneModel = modelVal;
-                let workStatus = "good";
+                workStatus = "good";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -477,7 +489,7 @@ $(document).ready(function () {
             } else if (logoVal === "huawei" && stateVal === "good") {
                 let tableName = "used_huaweis";
                 let phoneModel = modelVal;
-                let workStatus = "good";
+                workStatus = "good";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -488,7 +500,7 @@ $(document).ready(function () {
             } else if (logoVal === "iphone" && stateVal === "good") {
                 let tableName = "used_iphones";
                 let phoneModel = modelVal;
-                let workStatus = "good";
+                workStatus = "good";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -499,7 +511,7 @@ $(document).ready(function () {
             } else if (logoVal === "samsung" && stateVal === "damaged") {
                 let tableName = "used_samsungs";
                 let phoneModel = modelVal;
-                let workStatus = "damaged";
+                workStatus = "damaged";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -510,7 +522,7 @@ $(document).ready(function () {
             } else if (logoVal === "huawei" && stateVal === "damaged") {
                 let tableName = "used_huaweis";
                 let phoneModel = modelVal;
-                let workStatus = "damaged";
+                workStatus = "damaged";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -521,7 +533,7 @@ $(document).ready(function () {
             } else if (logoVal === "iphone" && stateVal === "damaged") {
                 let tableName = "used_iphones";
                 let phoneModel = modelVal;
-                let workStatus = "damaged";
+                workStatus = "damaged";
                 $(".sendvals").load("buy.php", {
                     'table_name': tableName,
                     'phone_model': phoneModel,
@@ -567,6 +579,7 @@ $(document).ready(function () {
     // Progress Bar Seeker End   
 
     $('.dtls-next').click(function () {
+        $('.buyModal').scrollTop(0);
         $('.ph-details').hide();
         $('.contacts').fadeIn(800);
         var _index;
@@ -577,6 +590,7 @@ $(document).ready(function () {
     });
 
     $('.con-prev').click(function () {
+        $('.buyModal').scrollTop(0);
         $('.contacts').hide();
         $('.ph-details').fadeIn(800);
         var _index;
@@ -586,18 +600,9 @@ $(document).ready(function () {
         return activate(_index);
     });
 
-    $('.con-next').click(function () {
-        $('.contacts').hide();
-        $('.thanks-for-order').fadeIn(800);
-        var _index;
-        _index = 2;
-        tracker = _index === 0 ? 1 : _index === val ? 0 : tracker;
-
-        return activate(_index);
-    });
-
     // When the user clicks on <span> (x), close the modal
     $('.modClose').click(function () {
+        $('.buyModal').scrollTop(0);
         $('.contacts, .thanks-for-order').hide();
         $('.ph-details').fadeIn(800);
         $('.buyModal').css('display', 'none');
@@ -615,6 +620,7 @@ $(document).ready(function () {
     // When the user clicks anywhere outside of the modal, close it
     $('.buyModal').click(function (e) {
         if (e.target.className == 'buyModal') {
+            $('.buyModal').scrollTop(0);
             $('.contacts, .thanks-for-order').hide();
             $('.ph-details').fadeIn(800);
             $(this).css('display', 'none');
@@ -637,39 +643,78 @@ $(document).ready(function () {
     $('.in-ward').hide();
     let county = $('.county').val();
     let constituency = $('.constituency.' + county).val();
-    let ward = $('.ward.' + constituency).val();
-
-    let countext = '';
-    let constext = '';
-    let wardtext = '';
+    let countext = $('.county option:selected').text();
+    let constext = $('.constituency.' + county + ' option:selected').text();
+    let wardtext = $('.ward.' + constituency + ' option:selected').text();
 
     $('.county').change(function () {
         countext = $('.county option:selected').text();
+        county = $('.county').val();
+        constituency = $('.constituency.' + county).val();
+        constext = $('.constituency.' + county + ' option:selected').text();
+        wardtext = $('.ward.' + constituency + ' option:selected').text();
         $('.ward').hide();
         $('.in-ward').hide();
         $('.constituency').hide();
-        county = $('.county').val();
         $('.in-constituency').show();
         $('.constituency.' + county).show();
-        alert(countext);
     });
 
     $('.constituency').change(function () {
-        constext = $('.constituency.' + county + ' option:selected').text();
-        $('.ward').hide();
         constituency = $('.constituency.' + county).val();
-        ward = $('.ward.' + constituency).val();
+        constext = $('.constituency.' + county + ' option:selected').text();
+        wardtext = $('.ward.' + constituency + ' option:selected').text();
+        $('.ward').hide();
         $('.in-ward').show();
         $('.ward.' + constituency).show();
-        alert(constext);
     });
 
     $('.ward').change(function () {
-        wardtext = $('.ward.' + constituency).val();
-        ward = $('.ward.' + constituency).val();
-        alert(wardtext);
-        alert(ward);
+        wardtext = $('.ward.' + constituency + ' option:selected').text();
     });
 
+    $('.con-next').click(function () {
+        let buyer_fname = $('#in-fname').val();
+        let buyer_lname = $('#in-lname').val();
+        let buyer_phone = $('#in-phone').val();
+        let buyer_email = $('#in-email').val();
+        let buyer_county = countext;
+        let buyer_const = constext;
+        let buyer_ward = wardtext;
+        let buyer_model = modelVal;
+        let buyer_phid = prodID;
+        let buyer_status = workStatus;
+
+        if (buyer_fname == "" || buyer_lname == "" || buyer_phone == "" || buyer_email == "") {
+            alert('please fill in all details');
+        } else if (countext == "Select your county") {
+            alert('please select your county');
+        } else if (constext == "Select your constituency") {
+            alert('please select your counstituency');
+        } else if (wardtext == "Select your ward") {
+            alert('please select your ward');
+        } else {
+            $('.postit').load("buyers.php", {
+                'bfname': buyer_fname,
+                'blname': buyer_lname,
+                'bphone': buyer_phone,
+                'bemail': buyer_email,
+                'bcounty': buyer_county,
+                'bconst': buyer_const,
+                'bward': buyer_ward,
+                'bmodel': buyer_model,
+                'bphid': buyer_phid,
+                'bstatus': buyer_status
+            });
+            $('.buyModal').scrollTop(0);
+            $('.contacts').hide();
+            $('.thanks-for-order').fadeIn(800);
+            var _index;
+            _index = 2;
+            tracker = _index === 0 ? 1 : _index === val ? 0 : tracker;
+
+            return activate(_index);
+        }
+    });
 
 });

@@ -204,6 +204,15 @@ body {
     width: 50%;
 }
 
+#in-county,
+#in-phone,
+#in-fname,
+#in-lname,
+#in-constituency,
+#in-ward {
+    text-transform: capitalize;
+}
+
 .inputs {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
@@ -212,7 +221,6 @@ body {
     height: 50px;
     width: 98%;
     padding: 10px 20px;
-    text-transform: capitalize;
     border-radius: 25px;
     box-shadow: inset 4px 6px 10px -4px rgba(7, 69, 76, 0.3), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
     background: rgba(7, 69, 76, 0.05);

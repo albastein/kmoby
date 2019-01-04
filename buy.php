@@ -68,6 +68,7 @@ if ($tableName == "used_samsungs" || $tableName == "used_huaweis" || $tableName 
                 $udivHtml .='       <span class="elcolor" data-color="' . $row['color'] . '"></span>';
                 $udivHtml .='       <span class="elmprice" data-price="' . $row['marked_price'] . '"></span>';
                 $udivHtml .='       <span class="eldprice" data-price="' . $row['discount_price'] . '"></span>';
+                $udivHtml .='       <span class="elid" data-id="' . $row['id'] . '"></span>';
                 $udivHtml .='   </div>';
                 $udivHtml .='</div>';
             }
@@ -124,6 +125,7 @@ if ($tableName == "used_samsungs" || $tableName == "used_huaweis" || $tableName 
                 $udivHtml .='       <span class="elcolor" data-color="' . $row['color'] . '"></span>';
                 $udivHtml .='       <span class="elmprice" data-price="' . $row['marked_price'] . '"></span>';
                 $udivHtml .='       <span class="eldprice" data-price="' . $row['discount_price'] . '"></span>';
+                $udivHtml .='       <span class="elid" data-id="' . $row['id'] . '"></span>';
                 $udivHtml .='   </div>';
                 $udivHtml .='</div>';
             }
@@ -178,9 +180,10 @@ if ($tableName == "used_samsungs" || $tableName == "used_huaweis" || $tableName 
             $ndivHtml .='            </div>';
             $ndivHtml .='        </div>';
             $ndivHtml .='    </div>';
-            $ndivHtml .='    <span class="elcolor" data-color="' . $row['color'] . '"></span>';
-            $ndivHtml .='    <span class="elmprice" data-price="' . $row['price'] . '"></span>';
-            $ndivHtml .='    <span class="eldprice" data-price="' . $row['discount_price'] . '"></span>';
+            $ndivHtml .='       <span class="elcolor" data-color="' . $row['color'] . '"></span>';
+            $ndivHtml .='       <span class="elmprice" data-price="' . $row['price'] . '"></span>';
+            $ndivHtml .='       <span class="eldprice" data-price="' . $row['discount_price'] . '"></span>';
+            $udivHtml .='       <span class="elid" data-id="' . $row['id'] . '"></span>';
             $ndivHtml .='</div>';
         }
     }
