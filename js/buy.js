@@ -304,7 +304,6 @@ $(document).ready(function () {
             $('.sensors-ph').text('N/A');
             $('.battery-ph').text('N/A');
 
-
             $('.brand-ph').text(brand);
             $('.model-ph').text(model);
             $('.color-ph').text(color);
@@ -630,4 +629,47 @@ $(document).ready(function () {
             return activate(_index);
         }
     });
+
+    // select boxes for user location
+    $('.constituency').hide();
+    $('.in-constituency').hide();
+    $('.ward').hide();
+    $('.in-ward').hide();
+    let county = $('.county').val();
+    let constituency = $('.constituency.' + county).val();
+    let ward = $('.ward.' + constituency).val();
+
+    let countext = '';
+    let constext = '';
+    let wardtext = '';
+
+    $('.county').change(function () {
+        countext = $('.county option:selected').text();
+        $('.ward').hide();
+        $('.in-ward').hide();
+        $('.constituency').hide();
+        county = $('.county').val();
+        $('.in-constituency').show();
+        $('.constituency.' + county).show();
+        alert(countext);
+    });
+
+    $('.constituency').change(function () {
+        constext = $('.constituency.' + county + ' option:selected').text();
+        $('.ward').hide();
+        constituency = $('.constituency.' + county).val();
+        ward = $('.ward.' + constituency).val();
+        $('.in-ward').show();
+        $('.ward.' + constituency).show();
+        alert(constext);
+    });
+
+    $('.ward').change(function () {
+        wardtext = $('.ward.' + constituency).val();
+        ward = $('.ward.' + constituency).val();
+        alert(wardtext);
+        alert(ward);
+    });
+
+
 });
